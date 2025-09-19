@@ -1,89 +1,268 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thai Barber - Tiệm Cắt Tóc Nam Nam Định</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background: black; color: white; text-align: center; padding: 40px 10px; }
-    header h1 { margin: 0; font-size: 2.5em; }
-    header p { font-size: 1.2em; margin-top: 10px; }
-    nav { background: #333; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { color: #ffcc00; }
-    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    h2 { color: #333; margin-bottom: 20px; }
-    .services, .prices { display: flex; gap: 20px; flex-wrap: wrap; }
-    .card { flex: 1; min-width: 250px; background: #f4f4f4; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .contact form { display: flex; flex-direction: column; gap: 10px; }
-    input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; width: 100%; }
-    button { background: black; color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer; }
-    button:hover { background: #ffcc00; color: black; }
-    footer { background: #222; color: white; text-align: center; padding: 15px; margin-top: 40px; }
-    iframe { border: 0; width: 100%; height: 300px; border-radius: 8px; }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thái Barber - Tiệm Cắt Tóc Nam Nam Định</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="logo.jpg" />
+    <!-- Font Awesome để dùng icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <img src="logo.jpg" alt="Logo" class="nav-logo" />
+        <span class="brand">Thái Barber</span>
+      </div>
+      <ul class="nav-right">
+        <li><a href="#about">Giới thiệu</a></li>
+        <li><a href="#styles">Kiểu tóc</a></li>
+        <li><a href="#services">Dịch vụ</a></li>
+        <li><a href="#prices">Bảng giá</a></li>
+        <li><a href="#album">Album</a></li>
+        <li><a href="#booking">Đặt lịch</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+    </nav>
 
-  <header>
-    <h1>Thai Barber</h1>
-    <p>Tiệm Cắt Tóc Nam - Nam Định</p>
-  </header>
-
-  <nav>
-    <a href="#about">Giới thiệu</a>
-    <a href="#services">Dịch vụ</a>
-    <a href="#prices">Bảng giá</a>
-    <a href="#booking">Đặt lịch</a>
-    <a href="#contact">Liên hệ</a>
-  </nav>
-
-  <section id="about">
-    <h2>Giới thiệu</h2>
-    <p>Thai Barber tự hào là tiệm cắt tóc nam hiện đại tại Nam Định, mang đến phong cách trẻ trung, lịch lãm và phù hợp xu hướng. Với đội ngũ barber nhiều kinh nghiệm, chúng tôi cam kết đem lại sự hài lòng cho mọi khách hàng.</p>
-  </section>
-
-  <section id="services">
-    <h2>Dịch vụ</h2>
-    <div class="services">
-      <div class="card"><h3>Cắt tóc nam</h3><p>Tư vấn kiểu tóc phù hợp với khuôn mặt và phong cách.</p></div>
-      <div class="card"><h3>Uốn/Nhuộm</h3><p>Cập nhật xu hướng mới, sử dụng sản phẩm an toàn.</p></div>
-      <div class="card"><h3>Combo</h3><p>Cắt + gội + massage thư giãn.</p></div>
+    <!-- ===== ẢNH BÌA ===== -->
+    <div class="cover">
+      <img src="bia.jpg" alt="Ảnh bìa Thái Barber" class="cover-img" />
+      <div class="cover-overlay">
+        <h2>Thái Barber</h2>
+        <p>Tiệm Cắt Tóc Nam - Nam Định</p>
+      </div>
     </div>
-  </section>
 
-  <section id="prices">
-    <h2>Bảng giá</h2>
-    <div class="prices">
-      <div class="card"><h3>Cắt tóc</h3><p>100.000 VNĐ</p></div>
-      <div class="card"><h3>Cắt + gội</h3><p>150.000 VNĐ</p></div>
-      <div class="card"><h3>Uốn/Nhuộm</h3><p>Từ 300.000 VNĐ</p></div>
+    <!-- ===== BỐ CỤC CHÍNH ===== -->
+    <div class="container">
+      <!-- Sidebar trái -->
+      <aside class="sidebar">
+        <img src="logo.jpg" alt="Thái Barber" class="profile-logo" />
+        <h2>Thái Barber</h2>
+        <p>Tiệm Cắt Tóc Nam đẹp tại Nam Định</p>
+
+        <section id="styles" class="card">
+          <h3>Kiểu tóc thịnh hành</h3>
+          <div class="styles">
+            <div class="style-card">
+              <img src="undercut.jpg" alt="Kiểu tóc Undercut" />
+              <h4>Undercut</h4>
+              <p>Hiện đại, cạo sát hai bên và để dài trên đỉnh.</p>
+            </div>
+            <div class="style-card">
+              <img src="sidepart.jpg" alt="Kiểu tóc Side Part" />
+              <h4>Side Part</h4>
+              <p>Thanh lịch, rẽ ngôi 7/3 hoặc 6/4, hợp công sở.</p>
+            </div>
+            <div class="style-card">
+              <img src="layer.jpg" alt="Kiểu tóc Layer" />
+              <h4>Layer</h4>
+              <p>Bồng bềnh tự nhiên, xu hướng Hàn Quốc trẻ trung.</p>
+            </div>
+            <div class="style-card">
+              <img src="mohican.png" alt="Kiểu tóc Mohican" />
+              <h4>Mohican</h4>
+              <p>Cắt gọn hai bên, phần mái vuốt dựng, năng động.</p>
+            </div>
+            <div class="style-card">
+              <img src="quiff.webp" alt="Kiểu tóc Quiff" />
+              <h4>Quiff</h4>
+              <p>Mái tóc vuốt ngược, độ phồng tự nhiên, cá tính.</p>
+            </div>
+            <div class="style-card">
+              <img src="pompadour.jpg" alt="Kiểu tóc Pompadour" />
+              <h4>Pompadour</h4>
+              <p>Mái dài vuốt ngược, phong cách quý ông lịch lãm.</p>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Nội dung chính -->
+      <main class="content">
+        <!-- GIỚI THIỆU -->
+        <section id="about" class="card about">
+          <h3>Giới thiệu cửa hàng</h3>
+          <div class="about-text">
+            <p>
+              <strong>Thái Barber</strong> tự hào là tiệm cắt tóc nam hiện đại
+              tại <b>Nam Định</b>, mang đến phong cách trẻ trung, lịch lãm và
+              luôn cập nhật xu hướng mới nhất.
+            </p>
+            <ul>
+              <li>
+                Không gian <b>sang trọng, thoải mái</b>, mang lại trải nghiệm
+                thư giãn.
+              </li>
+              <li>
+                Đội ngũ barber <b>nhiều năm kinh nghiệm</b>, tận tâm trong từng
+                đường kéo.
+              </li>
+              <li>
+                Dịch vụ đa dạng:
+                <i>Cắt tóc, gội đầu, uốn/nhuộm, massage thư giãn</i>.
+              </li>
+              <li>
+                Luôn cập nhật các kiểu tóc hot trend:
+                <i>Undercut, Mohican, Side Part, Layer...</i>
+              </li>
+            </ul>
+            <p class="slogan">
+              Với phương châm:
+              <b
+                >“Đẹp trai không chỉ là ngoại hình, mà còn là phong cách
+                sống”</b
+              >, Thái Barber cam kết mang lại sự hài lòng tuyệt đối.
+            </p>
+          </div>
+
+          <!-- Ảnh nằm dưới phần chữ -->
+          <div class="about-img">
+            <img src="ben-trong.jpg" alt="Không gian Thái Barber" />
+          </div>
+        </section>
+        <!-- DỊCH VỤ -->
+        <section id="services" class="card">
+          <h3>Dịch vụ</h3>
+          <div class="services">
+            <div class="service-card">
+              <i class="fas fa-cut"></i>
+              <h4>Cắt tóc nam</h4>
+              <p>
+                Tư vấn kiểu tóc hợp khuôn mặt, phong cách trẻ trung & hiện đại.
+              </p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-burn"></i>
+              <h4>Uốn / Nhuộm</h4>
+              <p>
+                Cập nhật xu hướng mới, sử dụng sản phẩm an toàn cho tóc & da
+                đầu.
+              </p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-spa"></i>
+              <h4>Combo thư giãn</h4>
+              <p>
+                Cắt + gội + massage, mang lại cảm giác thoải mái và sảng khoái.
+              </p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-smile"></i>
+              <h4>Chăm sóc da</h4>
+              <p>
+                Xông hơi, hút mụn, tẩy tế bào chết giúp da mặt sạch và sáng
+                khỏe.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Bảng giá -->
+        <section id="prices" class="card">
+          <h3>Bảng giá dịch vụ</h3>
+          <h4>Cắt tóc</h4>
+          <ul class="price-list">
+            <li><span>Trẻ em</span><span>30 – 40k</span></li>
+            <li><span>Học sinh cấp 1</span><span>50k</span></li>
+            <li><span>Học sinh cấp 2 + 3</span><span>60k</span></li>
+            <li><span>Người lớn (18+)</span><span>70k</span></li>
+            <li><span>Combo cắt + gội</span><span>110k</span></li>
+          </ul>
+
+          <h4>Dịch vụ</h4>
+          <ul class="price-list">
+            <li><span>Ráy tai</span><span>20 – 30k</span></li>
+            <li><span>Tẩy tế bào chết</span><span>10k</span></li>
+            <li><span>Xông hơi mặt + hút mụn cám</span><span>30k</span></li>
+            <li><span>Lột mụn đầu đen</span><span>20k</span></li>
+          </ul>
+
+          <h4>Hóa chất</h4>
+          <ul class="price-list">
+            <li><span>Uốn phồng tạo kiểu</span><span>300 – 400k</span></li>
+            <li><span>Uốn sâu</span><span>400 – 500k</span></li>
+            <li><span>Uốn Ruffled</span><span>500 – 600k</span></li>
+            <li><span>Nhuộm màu</span><span>150 – 500k</span></li>
+            <li><span>Gẩy light</span><span>350 – 450k</span></li>
+            <li><span>Bạch kim</span><span>600 – 700k</span></li>
+          </ul>
+        </section>
+
+        <!-- Album -->
+        <section id="album" class="card">
+          <h3>Album hình ảnh</h3>
+          <div class="gallery">
+            <img src="album.jpg" alt="Hình ảnh tiệm cắt tóc" />
+            <img src="album2.jpg" alt="Khách hàng tại Thái Barber" />
+            <img src="album3.jpg" alt="Kiểu tóc nam đẹp" />
+            <img src="album4.jpg" alt="Không gian bên trong tiệm" />
+            <img src="album5.jpg" alt="Barber đang làm việc" />
+            <img src="album6.jpg" alt="Kiểu tóc uốn nhuộm" />
+          </div>
+        </section>
+      </main>
+
+      <!-- Sidebar phải -->
+      <aside class="sidebar-right">
+        <section id="booking" class="card">
+          <h3>Đặt lịch</h3>
+          <form>
+            <input type="text" placeholder="Họ và tên" required />
+            <input type="tel" placeholder="Số điện thoại" required />
+            <input type="datetime-local" required />
+            <button type="submit">Gửi</button>
+          </form>
+        </section>
+
+        <section id="contact" class="card">
+          <h3>Liên hệ</h3>
+          <p><i class="fas fa-user"></i> <span>Mr. Thái</span></p>
+          <p>
+            <i class="fas fa-location-dot"></i>
+            <span>627 Giải Phóng, P. Trường Thi, Ninh Bình</span>
+          </p>
+          <p><i class="fas fa-phone"></i> <span>0989 100 419</span></p>
+
+          <p>
+            <i class="fab fa-facebook"></i>
+            FB Cá nhân:
+            <a href="https://www.facebook.com/DanienThai" target="_blank"
+              >Thái Barber</a
+            >
+          </p>
+          <p>
+            <i class="fab fa-facebook"></i>
+            FB Fanpage:
+            <a href="https://www.facebook.com/thaibarber627/" target="_blank"
+              >Tiệm Tóc Nam - Thái Barber</a
+            >
+          </p>
+
+          <!-- Google Map -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3739.191996279446!2d106.1613559!3d20.4161788!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135e10db150c6ed%3A0x1ee93d16bfaf3d7!2zQ-G6r3QgVMOzYyBOYW0gLSBUaMOhaSBCYXJiZXI!5e0!3m2!1svi!2sjp!4v1758250187166!5m2!1svi!2sjp"
+            width="100%"
+            height="250"
+            style="border: 0; border-radius: 8px; margin-top: 10px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </section>
+      </aside>
     </div>
-  </section>
 
-  <section id="booking">
-    <h2>Đặt lịch</h2>
-    <form>
-      <input type="text" placeholder="Họ và tên" required>
-      <input type="tel" placeholder="Số điện thoại" required>
-      <input type="datetime-local" required>
-      <button type="submit">Gửi yêu cầu</button>
-    </form>
-    <p><i>*Form này demo. Có thể kết nối Google Form hoặc EmailJS để nhận lịch thật.</i></p>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Liên hệ</h2>
-    <p>📍 Địa chỉ: 627 Giải Phóng, Trường Thi, TP Nam Định</p>
-    <p>📞 Hotline: 0989 100 419</p>
-    <p>Facebook: <a href="https://www.facebook.com/thaibarber627/" target="_blank">Thái Barber</a></p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.586..."></iframe>
-  </section>
-
-  <footer>
-    <p>© 2025 Thai Barber - Designed by Bạn</p>
-  </footer>
-
-</body>
+    <footer>
+      <div class="footer-bottom">
+        <p>© 2025 Thái Barber. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
