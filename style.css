@@ -9,9 +9,9 @@ body {
 /* ===== NAVBAR ===== */
 .navbar {
   display: flex;
-  justify-content: space-between; /* logo trái, menu phải */
+  justify-content: space-between; /* logo left, menu right */
   align-items: center;
-  background: white;
+  background: #fff;
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   position: sticky;
@@ -19,15 +19,75 @@ body {
   z-index: 1000;
 }
 
-/* trang chu */
+/* Menu right */
+.nav-right {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-right li a {
+  display: inline-block;
+  padding: 6px 12px;
+  line-height: 1.5;
+  font-weight: 700 !important;
+  text-decoration: none;
+  color: #333;
+  border-radius: 6px;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover for normal links */
+.nav-right li a:hover {
+  background: #f0f2f5;  /* light gray background */
+  color: #1877f2;       /* blue text */
+  transform: scale(1.1);
+}
+
+/* Special style for Home */
 .nav-right li a[href="index.html"] {
-  font-weight: bold;        /* đậm hơn */
-  font-size: 1.2em;         /* to hơn chút */
-  color: #1877F2;           /* đỏ nổi bật */
+  font-weight: bold;
+  font-size: 1.1em;
+  background: #1877f2; /* Facebook blue */
+  color: #fff;
+  text-transform: uppercase;
 }
+
+/* Hover for Home */
 .nav-right li a[href="index.html"]:hover {
-  color: #1877f2;           /* khi hover đổi xanh Facebook */
+  background: #145dbf; /* darker blue */
+  color: #fff;
+  transform: scale(1.1);
 }
+
+/* Logo + Brand (left nav) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-left .brand {
+  color: #1877f2;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.nav-left img {
+  pointer-events: none; /* để logo không chặn sự kiện click */
+}
+
+/* Hover logo + brand (no background) */
+.nav-left:hover {
+  transform: scale(1.1);
+}
+.nav-left:hover .brand { color: #145dbf; }
+.nav-left:hover .nav-logo { filter: brightness(1.2); }
+
 /* ===== HAMBURGER MENU (MOBILE) ===== */
 .hamburger {
   display: none;
