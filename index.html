@@ -6,7 +6,7 @@
     <title>Thái Barber - Tiệm Cắt Tóc Nam Nam Định</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="logo.jpg" />
-    <!-- Font Awesome để dùng icon -->
+    <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -15,12 +15,12 @@
   <body>
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
-      <div class="nav-left">
+      <a href="index.html" class="nav-left">
         <img src="logo.jpg" alt="Logo" class="nav-logo" />
         <span class="brand">Thái Barber</span>
-      </div>
+      </a>
 
-      <!-- Nút hamburger cho mobile -->
+      <!-- Hamburger button for mobile -->
       <div class="hamburger" onclick="toggleMenu()">☰</div>
 
       <ul class="nav-right">
@@ -30,30 +30,33 @@
       </ul>
     </nav>
 
-    <!-- Menu mobile -->
+    <!-- Mobile menu -->
     <div class="mobile-menu" id="mobileMenu">
       <a href="index.html">Trang chủ</a>
       <a href="bangtin.html">Bảng Tin</a>
       <a href="tocdep.html">Tóc Đẹp</a>
     </div>
 
-    <!-- ===== ẢNH BÌA ===== -->
+    <!-- ===== COVER ===== -->
     <div class="cover">
       <img src="bia.jpg" alt="Ảnh bìa Thái Barber" class="cover-img" />
-      <!-- <div class="cover-overlay">
+      <!-- 
+      <div class="cover-overlay">
         <h2>Thái Barber</h2>
         <p>Tiệm Cắt Tóc Nam - Nam Định</p>
-      </div> -->
+      </div> 
+      -->
     </div>
 
-    <!-- ===== BỐ CỤC CHÍNH ===== -->
+    <!-- ===== MAIN LAYOUT ===== -->
     <div class="container">
-      <!-- Sidebar trái -->
+      <!-- Left sidebar -->
       <aside class="sidebar">
         <img src="logo.jpg" alt="Thái Barber" class="profile-logo" />
         <h2>Thái Barber</h2>
         <p>Tiệm Cắt Tóc Nam đẹp tại Nam Định</p>
 
+        <!-- Popular hairstyles -->
         <section id="styles" class="card">
           <h3>Kiểu tóc thịnh hành</h3>
           <div class="styles">
@@ -91,9 +94,9 @@
         </section>
       </aside>
 
-      <!-- Nội dung chính -->
+      <!-- Main content -->
       <main class="content">
-        <!-- GIỚI THIỆU -->
+        <!-- About -->
         <section id="about" class="card about">
           <h3>Giới thiệu cửa hàng</h3>
           <div class="about-text">
@@ -129,12 +132,12 @@
             </p>
           </div>
 
-          <!-- Ảnh nằm dưới phần chữ -->
+          <!-- Image under text -->
           <div class="about-img">
             <img src="ben-trong.jpg" alt="Không gian Thái Barber" />
           </div>
         </section>
-        <!-- DỊCH VỤ -->
+        <!-- Services -->
         <section id="services" class="card">
           <h3>Dịch vụ</h3>
           <div class="services">
@@ -170,7 +173,7 @@
             </div>
           </div>
         </section>
-        <!-- Bảng giá -->
+        <!-- Price list -->
         <section id="prices" class="card">
           <h3>Bảng giá dịch vụ</h3>
           <h4>Cắt tóc</h4>
@@ -201,7 +204,7 @@
           </ul>
         </section>
 
-        <!-- Album -->
+        <!-- Gallery -->
         <section id="album" class="card">
           <h3>Album hình ảnh</h3>
           <div class="gallery">
@@ -215,12 +218,12 @@
         </section>
       </main>
 
-      <!-- Sidebar phải -->
+      <!-- Right sidebar -->
       <aside class="sidebar-right">
         <section id="booking" class="card">
           <h3>Đặt lịch</h3>
 
-          <!-- Nhúng Google Form -->
+          <!-- Embedded Google Form -->
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSdI4MlyrW7hnuFAD-g5P2rpM5dg46wERG64FZsgBYN2GFhpCQ/viewform?embedded=true"
             width="100%"
@@ -257,7 +260,7 @@
             >
           </p>
 
-          <!-- Google Map -->
+          <!-- Embedded Google Map -->
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3739.191996279446!2d106.1613559!3d20.4161788!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135e10db150c6ed%3A0x1ee93d16bfaf3d7!2zQ-G6r3QgVMOzYyBOYW0gLSBUaMOhaSBCYXJiZXI!5e0!3m2!1svi!2sjp!4v1758250187166!5m2!1svi!2sjp"
             width="100%"
@@ -272,18 +275,19 @@
       </aside>
     </div>
 
+    <!-- ===== FOOTER ===== -->
     <footer>
       <div class="footer-bottom">
         <p>© 2025 Thái Barber. All rights reserved.</p>
       </div>
     </footer>
-    <!-- Messenger Plugin chat Code -->
+    <!-- Messenger Plugin chat code -->
     <div id="fb-root"></div>
     <div id="fb-customer-chat" class="fb-customerchat"></div>
 
     <script>
       var chatbox = document.getElementById("fb-customer-chat");
-      chatbox.setAttribute("page_id", "109932117025498"); // ID này chính là của Page bạn
+      chatbox.setAttribute("page_id", "109932117025498"); // Page ID
       chatbox.setAttribute("attribution", "biz_inbox");
     </script>
 
@@ -304,6 +308,7 @@
         js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
         fjs.parentNode.insertBefore(js, fjs);
       })(document, "script", "facebook-jssdk");
+
       function toggleMenu() {
         const menu = document.getElementById("mobileMenu");
         if (menu.style.display === "flex") {
