@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bảng Tin - Thái Barber</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background: #f0f2f5;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+      h2 {
+        text-align: center;
+        color: #1877f2;
+        margin: 20px 0;
+      }
+
+      /* Navbar */
+      /* .nav-right li a[href="index.html"] {
+        font-weight: bold;
+        font-size: 1.1em;
+        background: #1877f2;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 6px;
+        text-transform: uppercase;
+      }
+      .nav-right li a[href="index.html"]:hover {
+        background: #145dbf;
+      } */
+
+      /* Bảng tin section */
+      section.news {
+        display: flex;
+        gap: 20px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        align-items: center;
+      }
+      .news-text {
+        flex: 1;
+      }
+      .news-text h3 {
+        margin-top: 0;
+        color: #333;
+      }
+      .news-img {
+        flex: 1;
+      }
+      .news-img img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      /* Responsive: khi màn hình nhỏ thì xuống 1 cột */
+      @media (max-width: 768px) {
+        section.news {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- ===== NAVBAR ===== -->
+      <nav class="navbar">
+        <div class="nav-left">
+          <img src="logo.jpg" alt="Logo" class="nav-logo" />
+          <span class="brand">Thái Barber</span>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-right">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="bangtin.html">Bảng Tin</a></li>
+          <li><a href="tocdep.html">Tóc Đẹp</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h2>📢 Bảng Tin Thái Barber</h2>
+      <section class="news">
+        <div class="news-text">
+          <h3>Hôm nay tiệm có ông em ra làm quả uốn tóc.</h3>
+          <p>
+            Ngồi ghế vừa cầm điện thoại chơi game 🎮, vừa để thợ quấn từng lô.
+            Nhìn nghiêm túc lắm nhưng chắc trong bụng đang nghĩ: “Không biết ra
+            xong có biến thành idol Hàn Quốc không đây 🤔”.
+          </p>
+          <p>Anh em nào muốn thử đổi gió thì qua tiệm test luôn nhé 💈.</p>
+        </div>
+        <div class="news-img">
+          <img src="uontoc.jpg" alt="Uốn tóc tại Thái Barber" />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

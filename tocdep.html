@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tóc Đẹp - Undercut</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background: #f0f2f5;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .home-btn {
+        display: inline-block;
+        margin: 15px 20px;
+        padding: 8px 16px;
+        background: #1877f2;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .home-btn:hover {
+        background: #145dbf;
+      }
+
+      .article {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        line-height: 1.7;
+      }
+
+      .article h2 {
+        text-align: center;
+        color: #1877f2;
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+
+      .article h3 {
+        color: #333;
+        margin-top: 25px;
+        border-left: 5px solid #1877f2;
+        padding-left: 10px;
+      }
+
+      .article p {
+        color: #444;
+        margin-bottom: 15px;
+      }
+
+      .article img {
+        display: block;
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .highlight {
+        background: #eef5ff;
+        padding: 12px;
+        border-left: 5px solid #1877f2;
+        margin: 20px 0;
+        font-style: italic;
+        color: #222;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+      }
+      .gallery img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s;
+      }
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <img src="logo.jpg" alt="Logo" class="nav-logo" />
+        <span class="brand">Thái Barber</span>
+      </div>
+
+      <!-- Nút hamburger cho mobile -->
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+      <ul class="nav-right">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="bangtin.html">Bảng Tin</a></li>
+        <li><a href="tocdep.html">Tóc Đẹp</a></li>
+      </ul>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Trang chủ</a>
+      <a href="bangtin.html">Bảng Tin</a>
+      <a href="tocdep.html">Tóc Đẹp</a>
+    </div>
+
+    <div class="article">
+      <h2>💈 Kiểu Tóc Undercut</h2>
+
+      <img src="undercut-main.jpg" alt="Tóc Undercut phong cách hiện đại" />
+
+      <p>
+        <b>Undercut</b> là kiểu tóc nam được yêu thích nhất trong hơn một thập
+        kỷ qua. Với đặc trưng <b>cạo sát hai bên và để dài phần đỉnh đầu</b>,
+        Undercut mang lại sự tương phản mạnh mẽ, giúp gương mặt thêm góc cạnh và
+        nam tính.
+      </p>
+
+      <div class="highlight">
+        ✨ Điểm đặc biệt: Undercut vừa <b>lịch lãm</b> khi đi làm, lại vừa
+        <b>cá tính – phong trần</b> khi đi chơi. Một kiểu tóc “2 trong 1” đúng
+        nghĩa.
+      </div>
+
+      <h3>🔥 Ưu điểm nổi bật</h3>
+      <ul>
+        <li>Tạo vẻ ngoài <b>trẻ trung, nam tính</b>.</li>
+        <li>Dễ dàng biến tấu nhiều kiểu khác nhau.</li>
+        <li>Phù hợp với đa số khuôn mặt nam giới châu Á.</li>
+        <li>Dễ chăm sóc, chỉ cần tỉa gọn hai bên 3–4 tuần/lần.</li>
+      </ul>
+
+      <img src="undercut-side.jpg" alt="Góc nhìn ngang của Undercut" />
+
+      <h3>📌 Các biến thể phổ biến</h3>
+      <p>
+        Undercut không chỉ có một kiểu. Dưới đây là những phiên bản “hot trend”:
+      </p>
+      <ul>
+        <li>
+          <b>Undercut vuốt ngược (Slicked Back):</b> Phong cách quý ông lịch
+          lãm.
+        </li>
+        <li>
+          <b>Undercut Side Part:</b> Rẽ ngôi 7/3 hoặc 6/4, phù hợp công sở.
+        </li>
+        <li>
+          <b>Undercut Mohican:</b> Tóc mái vuốt dựng, trẻ trung, năng động.
+        </li>
+      </ul>
+
+      <img src="undercut-variants.jpg" alt="Các biến thể của Undercut" />
+
+      <h3>💡 Cách chăm sóc & tạo kiểu</h3>
+      <p>
+        Để tóc Undercut luôn đẹp, hãy sử dụng thêm <b>sáp vuốt tóc</b> hoặc
+        <b>pomade</b>
+        để giữ nếp. Gội đầu sạch, sấy khô rồi dùng lược tạo form trước khi vuốt
+        sáp sẽ giúp mái tóc giữ lâu và vào nếp hơn.
+      </p>
+
+      <div class="highlight">
+        👉 Mẹo nhỏ: Dùng máy sấy kết hợp lược tròn, tóc sẽ phồng và đẹp tự nhiên
+        hơn.
+      </div>
+
+      <h3>📸 Gallery Undercut</h3>
+      <div class="gallery">
+        <img src="undercut1.jpg" alt="Undercut 1" />
+        <img src="undercut2.jpg" alt="Undercut 2" />
+        <img src="undercut3.jpg" alt="Undercut 3" />
+        <img src="undercut4.jpg" alt="Undercut 4" />
+      </div>
+    </div>
+  </body>
+</html>
