@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Title hiển thị trên tab và kết quả tìm kiếm -->
-    <title>Thái Barber - Tiệm Cắt Tóc Nam Nam Định</title>
+    <title>Thái Barber 627 Giải Phóng - Tiệm Cắt Tóc Nam Đẹp Nam Định</title>
 
     <!-- Mô tả trang cho SEO -->
     <meta
       name="description"
-      content="Thái Barber - Tiệm cắt tóc nam phong cách hiện đại tại Nam Định. Đặt lịch ngay hôm nay để trải nghiệm dịch vụ chuyên nghiệp!"
+      content="Thái Barber 627 Giải Phóng - Tiệm cắt tóc nam đẹp phong cách hiện đại tại Nam Định. Đặt lịch ngay hôm nay để trải nghiệm dịch vụ chuyên nghiệp!"
     />
 
     <!-- Từ khóa liên quan -->
     <meta
       name="keywords"
-      content="cắt tóc nam Nam Định, barber Nam Định, Thái Barber, tiệm cắt tóc đẹp, Thái Barber 627 Giải Phóng"
+      content="Thái Barber Nam Định, Thai Barber, cắt tóc nam đẹp Nam Định, kiểu tóc nam đẹp, tóc nam undercut, tóc side part, tóc mohican, tóc layer, tóc quiff, tóc pompadour, barber Nam Định, tiệm cắt tóc nam hiện đại, tiệm tóc nam hot trend, barber shop nam định, undercut nam đẹp, side part học sinh, kiểu tóc nam công sở, tóc nam Hàn Quốc"
     />
 
     <!-- Open Graph (khi chia sẻ lên Facebook/Zalo) -->
@@ -56,22 +56,17 @@
         <span class="brand">Thái Barber</span>
       </a>
 
-      <!-- Hamburger button for mobile -->
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <!-- Nút hamburger cho mobile -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
 
-      <ul class="nav-right">
+      <ul class="nav-right" id="nav-menu">
         <li><a href="index.html">Trang chủ</a></li>
         <li><a href="bangtin.html">Bảng Tin</a></li>
         <li><a href="tocdep.html">Tóc Đẹp</a></li>
       </ul>
     </nav>
-
-    <!-- Mobile menu -->
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">Trang chủ</a>
-      <a href="bangtin.html">Bảng Tin</a>
-      <a href="tocdep.html">Tóc Đẹp</a>
-    </div>
 
     <!-- ===== COVER ===== -->
     <div class="cover">
@@ -96,36 +91,59 @@
         <section id="styles" class="card">
           <h3>Kiểu tóc thịnh hành</h3>
           <div class="styles">
-            <div class="style-card">
-              <img src="img/undercut.jpg" alt="Kiểu tóc Undercut" />
-              <h4>Undercut</h4>
-              <p>Hiện đại, cạo sát hai bên và để dài trên đỉnh.</p>
-            </div>
-            <div class="style-card">
-              <img src="img/sidepart.jpg" alt="Kiểu tóc Side Part" />
-              <h4>Side Part</h4>
-              <p>Thanh lịch, rẽ ngôi 7/3 hoặc 6/4, hợp công sở.</p>
-            </div>
-            <div class="style-card">
-              <img src="img/layer.jpg" alt="Kiểu tóc Layer" />
-              <h4>Layer</h4>
-              <p>Bồng bềnh tự nhiên, xu hướng Hàn Quốc trẻ trung.</p>
-            </div>
-            <div class="style-card">
-              <img src="img/mohican.png" alt="Kiểu tóc Mohican" />
-              <h4>Mohican</h4>
-              <p>Cắt gọn hai bên, phần mái vuốt dựng, năng động.</p>
-            </div>
-            <div class="style-card">
-              <img src="img/quiff.webp" alt="Kiểu tóc Quiff" />
-              <h4>Quiff</h4>
-              <p>Mái tóc vuốt ngược, độ phồng tự nhiên, cá tính.</p>
-            </div>
-            <div class="style-card">
-              <img src="img/pompadour.jpg" alt="Kiểu tóc Pompadour" />
-              <h4>Pompadour</h4>
-              <p>Mái dài vuốt ngược, phong cách quý ông lịch lãm.</p>
-            </div>
+            <!-- Undercut -->
+            <a href="tocdep.html#undercut" class="style-link">
+              <div class="style-card">
+                <img src="img/undercut.jpg" alt="Kiểu tóc Undercut" />
+                <h4>Undercut</h4>
+                <p>Hiện đại, cạo sát hai bên và để dài trên đỉnh.</p>
+              </div>
+            </a>
+
+            <!-- Side Part -->
+            <a href="tocdep.html#sidepart" class="style-link">
+              <div class="style-card">
+                <img src="img/sidepart.jpg" alt="Kiểu tóc Side Part" />
+                <h4>Side Part</h4>
+                <p>Thanh lịch, rẽ ngôi 7/3 hoặc 6/4, hợp công sở.</p>
+              </div>
+            </a>
+
+            <!-- Layer -->
+            <a href="tocdep.html#layer" class="style-link">
+              <div class="style-card">
+                <img src="img/layer.jpg" alt="Kiểu tóc Layer" />
+                <h4>Layer</h4>
+                <p>Bồng bềnh tự nhiên, xu hướng Hàn Quốc trẻ trung.</p>
+              </div>
+            </a>
+
+            <!-- Mohican -->
+            <a href="tocdep.html#mohican" class="style-link">
+              <div class="style-card">
+                <img src="img/mohican.png" alt="Kiểu tóc Mohican" />
+                <h4>Mohican</h4>
+                <p>Cắt gọn hai bên, phần mái vuốt dựng, năng động.</p>
+              </div>
+            </a>
+
+            <!-- Quiff -->
+            <a href="tocdep.html#quiff" class="style-link">
+              <div class="style-card">
+                <img src="img/quiff.webp" alt="Kiểu tóc Quiff" />
+                <h4>Quiff</h4>
+                <p>Mái tóc vuốt ngược, độ phồng tự nhiên, cá tính.</p>
+              </div>
+            </a>
+
+            <!-- Pompadour -->
+            <a href="tocdep.html#pompadour" class="style-link">
+              <div class="style-card">
+                <img src="img/pompadour.jpg" alt="Kiểu tóc Pompadour" />
+                <h4>Pompadour</h4>
+                <p>Mái dài vuốt ngược, phong cách quý ông lịch lãm.</p>
+              </div>
+            </a>
           </div>
         </section>
       </aside>
@@ -344,14 +362,27 @@
         js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
         fjs.parentNode.insertBefore(js, fjs);
       })(document, "script", "facebook-jssdk");
-
+    </script>
+    <script>
       function toggleMenu() {
-        const menu = document.getElementById("mobileMenu");
-        if (menu.style.display === "flex") {
-          menu.style.display = "none";
-        } else {
-          menu.style.display = "flex";
-        }
+        document.getElementById("nav-menu").classList.toggle("show");
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Thái Barber Nam Định",
+        "image": "https://www.thaibarber.net/img/logo.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "627 Giải Phóng, Nam Định",
+          "addressLocality": "Nam Định",
+          "addressCountry": "VN"
+        },
+        "telephone": "+84-989-100-419",
+        "openingHours": "Mo-Su 08:00-20:00",
+        "url": "https://www.thaibarber.net"
       }
     </script>
   </body>

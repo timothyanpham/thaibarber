@@ -12,7 +12,8 @@
       name="description"
       content="Cập nhật bảng tin, khuyến mãi và các hoạt động mới nhất từ Thái Barber - Tiệm cắt tóc nam phong cách hiện đại tại Nam Định."
     />
-
+    <meta name="author" content="Thái Barber Nam Định" />
+    <link rel="canonical" href="https://www.thaibarber.net/bangtin.html" />
     <!-- Từ khóa SEO -->
     <meta
       name="keywords"
@@ -44,16 +45,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <style>
-      body {
-        background: #f0f2f5;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
       .container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 15px;
+      }
+      .news-img img:hover {
+        transform: scale(1.03);
+        transition: 0.3s;
       }
       h2 {
         text-align: center;
@@ -117,9 +116,12 @@
           <span class="brand">Thái Barber</span>
         </a>
 
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <!-- Nút hamburger đẹp -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
 
-        <ul class="nav-right">
+        <ul class="nav-right" id="nav-menu">
           <li><a href="index.html">Trang chủ</a></li>
           <li><a href="bangtin.html">Bảng Tin</a></li>
           <li><a href="tocdep.html">Tóc Đẹp</a></li>
@@ -144,5 +146,15 @@
         </div>
       </section>
     </main>
+    <footer>
+      <div class="footer-bottom">
+        <p>© 2025 Thái Barber - Nam Định. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      function toggleMenu() {
+        document.getElementById("nav-menu").classList.toggle("show");
+      }
+    </script>
   </body>
 </html>

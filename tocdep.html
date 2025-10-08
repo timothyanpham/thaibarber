@@ -2,18 +2,25 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
     <title>Kiểu Tóc Đẹp Nam Định - Thái Barber</title>
+
+    <!-- ===== SEO ===== -->
     <meta
       name="description"
       content="Thái Barber giới thiệu các kiểu tóc nam đẹp, hiện đại và phù hợp xu hướng tại Nam Định. Đặt lịch ngay để thay đổi phong cách!"
     />
+    <meta name="author" content="Thái Barber Nam Định" />
+    <link rel="canonical" href="https://www.thaibarber.net/tocdep.html" />
     <meta
       name="keywords"
       content="kiểu tóc nam đẹp, tóc nam hiện đại Nam Định, barber Nam Định, Thái Barber"
     />
 
-    <!-- Open Graph -->
+    <!-- ===== Open Graph ===== -->
     <meta property="og:title" content="Kiểu Tóc Đẹp Nam Định - Thái Barber" />
     <meta
       property="og:description"
@@ -32,59 +39,62 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
     <style>
-      body {
-        background: #f0f2f5;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
+      html {
+        scroll-behavior: smooth;
       }
 
-      .home-btn {
-        display: inline-block;
-        margin: 15px 20px;
-        padding: 8px 16px;
-        background: #1877f2;
-        color: #fff;
-        font-weight: bold;
-        border-radius: 6px;
-        text-decoration: none;
-        transition: 0.3s;
+      /* ===== INTRO ===== */
+      .intro {
+        background: linear-gradient(to right, #eaf2ff, #f9fbff);
+        padding: 40px 20px;
+        text-align: center;
+        border-bottom: 2px solid #1877f2;
       }
-      .home-btn:hover {
-        background: #145dbf;
+      .intro-content {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .intro h1 {
+        color: #1877f2;
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+      .intro p {
+        font-size: 1.1em;
+        color: #444;
+        line-height: 1.7;
+        margin: 10px 0;
       }
 
-      .article {
+      /* ===== HAIRSTYLE SECTIONS ===== */
+      .hairstyle {
         max-width: 1000px;
-        margin: 20px auto;
-        padding: 20px;
+        margin: 40px auto;
+        padding: 30px;
         background: #fff;
         border-radius: 10px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         line-height: 1.7;
       }
-
-      .article h2 {
+      .hairstyle h2 {
         text-align: center;
         color: #1877f2;
         font-size: 2em;
         margin-bottom: 10px;
       }
-
-      .article h3 {
+      .hairstyle h3 {
         color: #333;
         margin-top: 25px;
         border-left: 5px solid #1877f2;
         padding-left: 10px;
       }
-
-      .article p {
+      .hairstyle p {
         color: #444;
         margin-bottom: 15px;
       }
-
-      .article img {
+      .hairstyle img {
         display: block;
         width: 100%;
         max-width: 800px;
@@ -92,7 +102,6 @@
         border-radius: 10px;
         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
       }
-
       .highlight {
         background: #eef5ff;
         padding: 12px;
@@ -118,8 +127,18 @@
       .gallery img:hover {
         transform: scale(1.05);
       }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 768px) {
+        .nav-right.show a:hover {
+          background: #f0f2f5;
+          color: #1877f2;
+          transform: none;
+        }
+      }
     </style>
   </head>
+
   <body>
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
@@ -128,24 +147,38 @@
         <span class="brand">Thái Barber</span>
       </a>
 
-      <!-- Nút hamburger cho mobile -->
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <!-- Nút hamburger -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
 
-      <ul class="nav-right">
+      <ul class="nav-right" id="nav-menu">
         <li><a href="index.html">Trang chủ</a></li>
         <li><a href="bangtin.html">Bảng Tin</a></li>
         <li><a href="tocdep.html">Tóc Đẹp</a></li>
       </ul>
     </nav>
 
-    <!-- Menu mobile -->
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">Trang chủ</a>
-      <a href="bangtin.html">Bảng Tin</a>
-      <a href="tocdep.html">Tóc Đẹp</a>
-    </div>
+    <!-- ===== INTRO ===== -->
+    <section class="intro">
+      <div class="intro-content">
+        <h1>💈 Bộ Sưu Tập Kiểu Tóc Nam Đẹp Tại Thái Barber</h1>
+        <p>
+          Tự tin thể hiện phong cách của bạn cùng <b>Thái Barber Nam Định</b> —
+          nơi những kiểu tóc nam hiện đại, lịch lãm và cá tính được tạo nên bởi
+          bàn tay thợ cắt chuyên nghiệp.
+        </p>
+        <p>
+          Dưới đây là <b>các mẫu tóc thịnh hành nhất năm 2025</b>, phù hợp với
+          mọi khuôn mặt và phong cách: từ <b>Undercut</b> mạnh mẽ đến
+          <b>Side Part</b> lịch lãm. Cùng khám phá ngay để chọn kiểu tóc khiến
+          bạn thật nổi bật ✂️
+        </p>
+      </div>
+    </section>
 
-    <div class="article">
+    <!-- ===== UNDERCUT ===== -->
+    <section class="hairstyle" id="undercut">
       <h2>💈 Kiểu Tóc Undercut</h2>
 
       <img src="img/undercut-main.jpg" alt="Tóc Undercut phong cách hiện đại" />
@@ -195,9 +228,8 @@
       <h3>💡 Cách chăm sóc & tạo kiểu</h3>
       <p>
         Để tóc Undercut luôn đẹp, hãy sử dụng thêm <b>sáp vuốt tóc</b> hoặc
-        <b>pomade</b>
-        để giữ nếp. Gội đầu sạch, sấy khô rồi dùng lược tạo form trước khi vuốt
-        sáp sẽ giúp mái tóc giữ lâu và vào nếp hơn.
+        <b>pomade</b> để giữ nếp. Gội đầu sạch, sấy khô rồi dùng lược tạo form
+        trước khi vuốt sáp sẽ giúp mái tóc giữ lâu và vào nếp hơn.
       </p>
 
       <div class="highlight">
@@ -212,6 +244,84 @@
         <img src="img/undercut3.jpg" alt="Undercut 3" />
         <img src="img/undercut4.jpg" alt="Undercut 4" />
       </div>
-    </div>
+    </section>
+
+    <!-- ===== SIDE PART ===== -->
+    <section class="hairstyle" id="sidepart">
+      <h2>✂️ Kiểu Tóc Side Part (Rẽ Ngôi Lịch Lãm)</h2>
+
+      <img src="img/sidepart-main.jpg" alt="Kiểu tóc Side Part hiện đại" />
+
+      <p>
+        <b>Side Part</b> là kiểu tóc rẽ ngôi cổ điển nhưng luôn giữ được sức hút
+        qua nhiều thế hệ. Với đường rẽ 7/3 hoặc 6/4 tinh tế, kiểu tóc này giúp
+        tôn lên nét thanh lịch, trưởng thành và gọn gàng cho phái mạnh.
+      </p>
+
+      <div class="highlight">
+        ✨ Điểm đặc biệt: Side Part dễ kết hợp trong mọi hoàn cảnh — đi học, đi
+        làm hay sự kiện đều phù hợp. Đây là kiểu tóc “an toàn” nhưng vẫn đầy
+        phong cách.
+      </div>
+
+      <h3>🔥 Ưu điểm nổi bật</h3>
+      <ul>
+        <li>Tạo cảm giác <b>sạch sẽ, lịch thiệp</b>.</li>
+        <li>
+          Phù hợp với <b>mọi khuôn mặt</b>, đặc biệt là mặt tròn và vuông.
+        </li>
+        <li>Dễ tạo kiểu chỉ với lược và sáp nhẹ.</li>
+        <li>Phù hợp môi trường công sở và học sinh, sinh viên.</li>
+      </ul>
+
+      <img src="img/sidepart-side.jpg" alt="Góc nghiêng Side Part" />
+
+      <h3>📌 Các biến thể phổ biến</h3>
+      <p>Dưới đây là những phiên bản Side Part đang được ưa chuộng:</p>
+      <ul>
+        <li>
+          <b>Classic Side Part:</b> Rẽ ngôi truyền thống, chải nhẹ theo nếp.
+        </li>
+        <li>
+          <b>Low Fade Side Part:</b> Hai bên tỉa mờ thấp, hiện đại, trẻ trung.
+        </li>
+        <li>
+          <b>Textured Side Part:</b> Thêm độ phồng tự nhiên, hợp xu hướng.
+        </li>
+      </ul>
+
+      <img src="img/sidepart-variants.jpg" alt="Các biến thể của Side Part" />
+
+      <h3>💡 Cách chăm sóc & tạo kiểu</h3>
+      <p>
+        Sau khi gội đầu, hãy sấy tóc theo chiều rẽ và sử dụng lượng sáp vừa đủ
+        để định hình. Với tóc mềm hoặc mỏng, nên chọn sáp có độ giữ nếp nhẹ đến
+        trung bình.
+      </p>
+
+      <div class="highlight">
+        👉 Mẹo nhỏ: Dùng lược răng thưa khi sấy để tạo độ phồng tự nhiên, tránh
+        bị bết tóc.
+      </div>
+
+      <h3>📸 Gallery Side Part</h3>
+      <div class="gallery">
+        <img src="img/sidepart1.jpg" alt="Side Part 1" />
+        <img src="img/sidepart2.jpg" alt="Side Part 2" />
+        <img src="img/sidepart3.jpg" alt="Side Part 3" />
+        <img src="img/sidepart4.jpg" alt="Side Part 4" />
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="footer-bottom">© 2025 Thái Barber | Nam Định - Việt Nam</div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("nav-menu").classList.toggle("show");
+      }
+    </script>
   </body>
 </html>
