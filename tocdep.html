@@ -58,7 +58,7 @@
       }
       .intro h1 {
         color: #1877f2;
-        font-size: 2em;
+        font-size: 1.5em;
         margin-bottom: 10px;
       }
       .intro p {
@@ -67,8 +67,60 @@
         line-height: 1.7;
         margin: 10px 0;
       }
+      /* XEM THÊM */
+      @media (max-width: 600px) {
+        .lightbox img {
+          width: 95%;
+          height: auto;
+        }
+      }
 
-      /* ===== HAIRSTYLE SECTIONS ===== */
+      .more-inner {
+        padding: 10px 0;
+        animation: fadeIn 0.4s ease;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .more-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.6s ease;
+      }
+      .more-content.show {
+        max-height: none;
+        overflow: hidden;
+        transition: max-height 0.6s ease;
+      }
+      .lightbox {
+        transition: opacity 0.3s ease;
+      }
+      .lightbox.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .toggle-btn {
+        display: block;
+        margin: 10px auto 0;
+        background: #1877f2;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .toggle-btn:hover {
+        background: #145dbf;
+      } /* ===== HAIRSTYLE SECTIONS ===== */
       .hairstyle {
         max-width: 1000px;
         margin: 40px auto;
@@ -81,7 +133,7 @@
       .hairstyle h2 {
         text-align: center;
         color: #1877f2;
-        font-size: 2em;
+        font-size: em;
         margin-bottom: 10px;
       }
       .hairstyle h3 {
@@ -101,6 +153,11 @@
         margin: 20px auto;
         border-radius: 10px;
         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+      .hairstyle img:hover {
+        transform: scale(1.03);
       }
       .highlight {
         background: #eef5ff;
@@ -111,24 +168,117 @@
         color: #222;
       }
 
+      /* Ảnh chính của từng kiểu tóc */
+      .hairstyle img:first-of-type {
+        width: 100%;
+        aspect-ratio: 16 / 9; /* hoặc 1 / 1 nếu bạn thích ảnh vuông */
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      /* Gallery đồng đều */
       .gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 15px;
         margin-top: 20px;
       }
+
       .gallery img {
+        max-width: 600px;
         width: 100%;
-        height: 220px;
-        object-fit: cover;
         border-radius: 8px;
-        transition: transform 0.3s;
+        margin: 15px auto;
+        object-fit: cover;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
       }
       .gallery img:hover {
         transform: scale(1.05);
       }
+      .hairstyle img:first-of-type {
+        width: 100%;
+        max-width: 600px; /* vẫn giữ, để không vượt quá khung */
+        aspect-ratio: 5 / 3; /* 🔹 khống chế chiều cao */
+        object-fit: cover; /* cắt đẹp, không méo */
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+      .hairstyle img:first-of-type:hover {
+        transform: scale(1.03);
+      }
 
-      /* ===== RESPONSIVE ===== */
+      /* Mobile gọn hơn */
+      @media (max-width: 768px) {
+        .hairstyle img:first-of-type {
+          aspect-ratio: 4 / 3;
+        }
+      }
+
+      /* ===== LIGHTBOX ===== */
+      .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        justify-content: center;
+        align-items: center;
+      }
+      .lightbox img {
+        max-width: 90%;
+        max-height: 85%;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        transition: opacity 0.3s ease;
+      }
+      .lightbox .close,
+      .lightbox .prev,
+      .lightbox .next {
+        position: absolute;
+        color: #fff;
+        font-size: 2.5em;
+        font-weight: bold;
+        cursor: pointer;
+        user-select: none;
+        transition: 0.3s;
+      }
+      .lightbox .close {
+        top: 25px;
+        right: 35px;
+      }
+      .lightbox .prev {
+        top: 50%;
+        left: 30px;
+        transform: translateY(-50%);
+      }
+      .lightbox .next {
+        top: 50%;
+        right: 30px;
+        transform: translateY(-50%);
+      }
+      .lightbox .prev:hover,
+      .lightbox .next:hover {
+        color: #ffcc00;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
       @media (max-width: 768px) {
         .nav-right.show a:hover {
           background: #f0f2f5;
@@ -147,7 +297,6 @@
         <span class="brand">Thái Barber</span>
       </a>
 
-      <!-- Nút hamburger -->
       <div class="hamburger" onclick="toggleMenu()">
         <i class="fas fa-bars"></i>
       </div>
@@ -159,7 +308,7 @@
       </ul>
     </nav>
 
-    <!-- ===== INTRO ===== -->
+    <!-- ===== GIỚI THIỆU ===== -->
     <section class="intro">
       <div class="intro-content">
         <h1>💈 Bộ Sưu Tập Kiểu Tóc Nam Đẹp Tại Thái Barber</h1>
@@ -167,12 +316,6 @@
           Tự tin thể hiện phong cách của bạn cùng <b>Thái Barber Nam Định</b> —
           nơi những kiểu tóc nam hiện đại, lịch lãm và cá tính được tạo nên bởi
           bàn tay thợ cắt chuyên nghiệp.
-        </p>
-        <p>
-          Dưới đây là <b>các mẫu tóc thịnh hành nhất năm 2025</b>, phù hợp với
-          mọi khuôn mặt và phong cách: từ <b>Undercut</b> mạnh mẽ đến
-          <b>Side Part</b> lịch lãm. Cùng khám phá ngay để chọn kiểu tóc khiến
-          bạn thật nổi bật ✂️
         </p>
       </div>
     </section>
@@ -189,61 +332,71 @@
         Undercut mang lại sự tương phản mạnh mẽ, giúp gương mặt thêm góc cạnh và
         nam tính.
       </p>
+      <div class="more-content">
+        <div class="more-inner">
+          <div class="highlight">
+            ✨ Điểm đặc biệt: Undercut vừa <b>lịch lãm</b> khi đi làm, lại vừa
+            <b>cá tính – phong trần</b> khi đi chơi. Một kiểu tóc “2 trong 1”
+            đúng nghĩa.
+          </div>
 
-      <div class="highlight">
-        ✨ Điểm đặc biệt: Undercut vừa <b>lịch lãm</b> khi đi làm, lại vừa
-        <b>cá tính – phong trần</b> khi đi chơi. Một kiểu tóc “2 trong 1” đúng
-        nghĩa.
+          <h3>🔥 Ưu điểm nổi bật</h3>
+          <ul>
+            <li>Tạo vẻ ngoài <b>trẻ trung, nam tính</b>.</li>
+            <li>Dễ dàng biến tấu nhiều kiểu khác nhau.</li>
+            <li>Phù hợp với đa số khuôn mặt nam giới châu Á.</li>
+            <li>Dễ chăm sóc, chỉ cần tỉa gọn hai bên 3–4 tuần/lần.</li>
+          </ul>
+
+          <img src="img/undercut-side.jpg" alt="Góc nhìn ngang của Undercut" />
+
+          <h3>📌 Các biến thể phổ biến</h3>
+          <p>
+            Undercut không chỉ có một kiểu. Dưới đây là những phiên bản “hot
+            trend”:
+          </p>
+          <ul>
+            <li>
+              <b>Undercut vuốt ngược (Slicked Back):</b> Phong cách quý ông lịch
+              lãm.
+            </li>
+            <li>
+              <b>Undercut Side Part:</b> Rẽ ngôi 7/3 hoặc 6/4, phù hợp công sở.
+            </li>
+            <li>
+              <b>Undercut Mohican:</b> Tóc mái vuốt dựng, trẻ trung, năng động.
+            </li>
+          </ul>
+
+          <img
+            src="img/undercut-variants.jpg"
+            alt="Các biến thể của Undercut"
+          />
+
+          <h3>💡 Cách chăm sóc & tạo kiểu</h3>
+          <p>
+            Để tóc Undercut luôn đẹp, hãy sử dụng thêm <b>sáp vuốt tóc</b> hoặc
+            <b>pomade</b> để giữ nếp. Gội đầu sạch, sấy khô rồi dùng lược tạo
+            form trước khi vuốt sáp sẽ giúp mái tóc giữ lâu và vào nếp hơn.
+          </p>
+
+          <div class="highlight">
+            👉 Mẹo nhỏ: Dùng máy sấy kết hợp lược tròn, tóc sẽ phồng và đẹp tự
+            nhiên hơn.
+          </div>
+
+          <h3>📸 Gallery Undercut</h3>
+          <div class="gallery">
+            <img src="img/undercut1.jpg" alt="Undercut 1" />
+            <img src="img/undercut2.jpg" alt="Undercut 2" />
+            <img src="img/undercut3.jpg" alt="Undercut 3" />
+            <img src="img/undercut4.jpg" alt="Undercut 4" />
+          </div>
+        </div>
       </div>
-
-      <h3>🔥 Ưu điểm nổi bật</h3>
-      <ul>
-        <li>Tạo vẻ ngoài <b>trẻ trung, nam tính</b>.</li>
-        <li>Dễ dàng biến tấu nhiều kiểu khác nhau.</li>
-        <li>Phù hợp với đa số khuôn mặt nam giới châu Á.</li>
-        <li>Dễ chăm sóc, chỉ cần tỉa gọn hai bên 3–4 tuần/lần.</li>
-      </ul>
-
-      <img src="img/undercut-side.jpg" alt="Góc nhìn ngang của Undercut" />
-
-      <h3>📌 Các biến thể phổ biến</h3>
-      <p>
-        Undercut không chỉ có một kiểu. Dưới đây là những phiên bản “hot trend”:
-      </p>
-      <ul>
-        <li>
-          <b>Undercut vuốt ngược (Slicked Back):</b> Phong cách quý ông lịch
-          lãm.
-        </li>
-        <li>
-          <b>Undercut Side Part:</b> Rẽ ngôi 7/3 hoặc 6/4, phù hợp công sở.
-        </li>
-        <li>
-          <b>Undercut Mohican:</b> Tóc mái vuốt dựng, trẻ trung, năng động.
-        </li>
-      </ul>
-
-      <img src="img/undercut-variants.jpg" alt="Các biến thể của Undercut" />
-
-      <h3>💡 Cách chăm sóc & tạo kiểu</h3>
-      <p>
-        Để tóc Undercut luôn đẹp, hãy sử dụng thêm <b>sáp vuốt tóc</b> hoặc
-        <b>pomade</b> để giữ nếp. Gội đầu sạch, sấy khô rồi dùng lược tạo form
-        trước khi vuốt sáp sẽ giúp mái tóc giữ lâu và vào nếp hơn.
-      </p>
-
-      <div class="highlight">
-        👉 Mẹo nhỏ: Dùng máy sấy kết hợp lược tròn, tóc sẽ phồng và đẹp tự nhiên
-        hơn.
-      </div>
-
-      <h3>📸 Gallery Undercut</h3>
-      <div class="gallery">
-        <img src="img/undercut1.jpg" alt="Undercut 1" />
-        <img src="img/undercut2.jpg" alt="Undercut 2" />
-        <img src="img/undercut3.jpg" alt="Undercut 3" />
-        <img src="img/undercut4.jpg" alt="Undercut 4" />
-      </div>
+      <button class="toggle-btn" onclick="toggleContent(this)">
+        Xem thêm ▼
+      </button>
     </section>
 
     <!-- ===== SIDE PART ===== -->
@@ -257,71 +410,523 @@
         qua nhiều thế hệ. Với đường rẽ 7/3 hoặc 6/4 tinh tế, kiểu tóc này giúp
         tôn lên nét thanh lịch, trưởng thành và gọn gàng cho phái mạnh.
       </p>
+      <div class="more-content">
+        <div class="more-inner">
+          <div class="highlight">
+            ✨ Điểm đặc biệt: Side Part dễ kết hợp trong mọi hoàn cảnh — đi học,
+            đi làm hay sự kiện đều phù hợp. Đây là kiểu tóc “an toàn” nhưng vẫn
+            đầy phong cách.
+          </div>
 
-      <div class="highlight">
-        ✨ Điểm đặc biệt: Side Part dễ kết hợp trong mọi hoàn cảnh — đi học, đi
-        làm hay sự kiện đều phù hợp. Đây là kiểu tóc “an toàn” nhưng vẫn đầy
-        phong cách.
+          <h3>🔥 Ưu điểm nổi bật</h3>
+          <ul>
+            <li>Tạo cảm giác <b>sạch sẽ, lịch thiệp</b>.</li>
+            <li>
+              Phù hợp với <b>mọi khuôn mặt</b>, đặc biệt là mặt tròn và vuông.
+            </li>
+            <li>Dễ tạo kiểu chỉ với lược và sáp nhẹ.</li>
+            <li>Phù hợp môi trường công sở và học sinh, sinh viên.</li>
+          </ul>
+
+          <img src="img/sidepart-side.jpg" alt="Góc nghiêng Side Part" />
+
+          <h3>📌 Các biến thể phổ biến</h3>
+          <p>Dưới đây là những phiên bản Side Part đang được ưa chuộng:</p>
+          <ul>
+            <li>
+              <b>Classic Side Part:</b> Rẽ ngôi truyền thống, chải nhẹ theo nếp.
+            </li>
+            <li>
+              <b>Low Fade Side Part:</b> Hai bên tỉa mờ thấp, hiện đại, trẻ
+              trung.
+            </li>
+            <li>
+              <b>Textured Side Part:</b> Thêm độ phồng tự nhiên, hợp xu hướng.
+            </li>
+          </ul>
+
+          <img
+            src="img/sidepart-variants.jpg"
+            alt="Các biến thể của Side Part"
+          />
+
+          <h3>💡 Cách chăm sóc & tạo kiểu</h3>
+          <p>
+            Sau khi gội đầu, hãy sấy tóc theo chiều rẽ và sử dụng lượng sáp vừa
+            đủ để định hình. Với tóc mềm hoặc mỏng, nên chọn sáp có độ giữ nếp
+            nhẹ đến trung bình.
+          </p>
+
+          <div class="highlight">
+            👉 Mẹo nhỏ: Dùng lược răng thưa khi sấy để tạo độ phồng tự nhiên,
+            tránh bị bết tóc.
+          </div>
+
+          <h3>📸 Gallery Side Part</h3>
+          <div class="gallery">
+            <img src="img/sidepart1.jpg" alt="Side Part 1" />
+            <img src="img/sidepart2.jpg" alt="Side Part 2" />
+            <img src="img/sidepart3.jpg" alt="Side Part 3" />
+            <img src="img/sidepart4.jpg" alt="Side Part 4" />
+          </div>
+        </div>
       </div>
 
-      <h3>🔥 Ưu điểm nổi bật</h3>
-      <ul>
-        <li>Tạo cảm giác <b>sạch sẽ, lịch thiệp</b>.</li>
-        <li>
-          Phù hợp với <b>mọi khuôn mặt</b>, đặc biệt là mặt tròn và vuông.
-        </li>
-        <li>Dễ tạo kiểu chỉ với lược và sáp nhẹ.</li>
-        <li>Phù hợp môi trường công sở và học sinh, sinh viên.</li>
-      </ul>
-
-      <img src="img/sidepart-side.jpg" alt="Góc nghiêng Side Part" />
-
-      <h3>📌 Các biến thể phổ biến</h3>
-      <p>Dưới đây là những phiên bản Side Part đang được ưa chuộng:</p>
-      <ul>
-        <li>
-          <b>Classic Side Part:</b> Rẽ ngôi truyền thống, chải nhẹ theo nếp.
-        </li>
-        <li>
-          <b>Low Fade Side Part:</b> Hai bên tỉa mờ thấp, hiện đại, trẻ trung.
-        </li>
-        <li>
-          <b>Textured Side Part:</b> Thêm độ phồng tự nhiên, hợp xu hướng.
-        </li>
-      </ul>
-
-      <img src="img/sidepart-variants.jpg" alt="Các biến thể của Side Part" />
-
-      <h3>💡 Cách chăm sóc & tạo kiểu</h3>
-      <p>
-        Sau khi gội đầu, hãy sấy tóc theo chiều rẽ và sử dụng lượng sáp vừa đủ
-        để định hình. Với tóc mềm hoặc mỏng, nên chọn sáp có độ giữ nếp nhẹ đến
-        trung bình.
-      </p>
-
-      <div class="highlight">
-        👉 Mẹo nhỏ: Dùng lược răng thưa khi sấy để tạo độ phồng tự nhiên, tránh
-        bị bết tóc.
-      </div>
-
-      <h3>📸 Gallery Side Part</h3>
-      <div class="gallery">
-        <img src="img/sidepart1.jpg" alt="Side Part 1" />
-        <img src="img/sidepart2.jpg" alt="Side Part 2" />
-        <img src="img/sidepart3.jpg" alt="Side Part 3" />
-        <img src="img/sidepart4.jpg" alt="Side Part 4" />
-      </div>
+      <!-- 👇 Nút bấm nằm ngoài more-content -->
+      <button class="toggle-btn" onclick="toggleContent(this)">
+        Xem thêm ▼
+      </button>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ===== LAYER ===== -->
+    <section class="hairstyle" id="layer">
+      <h2>💇‍♂️ Kiểu Tóc Layer Nam (Tự Nhiên & Trẻ Trung)</h2>
+
+      <img src="img/layer-main.jpg" alt="Kiểu tóc Layer nam Hàn Quốc" />
+
+      <p>
+        <b>Layer</b> là kiểu tóc cắt tỉa thành nhiều tầng, giúp tạo cảm giác
+        bồng bềnh, tự nhiên và mềm mại. Đây là lựa chọn hàng đầu cho những chàng
+        trai yêu thích phong cách <b>Hàn Quốc</b> trẻ trung, hiện đại.
+      </p>
+      <div class="more-content">
+        <div class="more-inner">
+          <div class="highlight">
+            ✨ Điểm đặc biệt: Layer có thể kết hợp linh hoạt với nhiều kiểu mặt,
+            giúp che khuyết điểm và tôn lên đường nét gương mặt. Càng tự nhiên
+            càng đẹp!
+          </div>
+
+          <h3>🔥 Ưu điểm nổi bật</h3>
+          <ul>
+            <li>Giúp tóc trông <b>dày và có độ phồng tự nhiên</b>.</li>
+            <li>Phù hợp với hầu hết khuôn mặt, đặc biệt là mặt tròn.</li>
+            <li>Tạo cảm giác <b>mềm mại, thư sinh</b>, trẻ hơn tuổi thật.</li>
+            <li>Dễ biến tấu: Layer xoăn nhẹ, Layer mái bay, Layer dài,...</li>
+          </ul>
+
+          <img src="img/layer-side.jpg" alt="Góc nghiêng tóc Layer nam" />
+
+          <h3>📌 Các biến thể phổ biến</h3>
+          <p>
+            Dưới đây là một số biến thể Layer được yêu thích nhất tại Thái
+            Barber:
+          </p>
+          <ul>
+            <li>
+              <b>Layer mái bay:</b> Mang phong cách Hàn Quốc, mềm mại và tự
+              nhiên.
+            </li>
+            <li>
+              <b>Layer xoăn nhẹ:</b> Tăng độ bồng bềnh, hợp với tóc mảnh hoặc
+              thưa.
+            </li>
+            <li>
+              <b>Layer dài:</b> Giữ độ dài phần mái, tạo cảm giác lãng tử và cá
+              tính.
+            </li>
+          </ul>
+
+          <img
+            src="img/layer-variants.jpg"
+            alt="Các biến thể kiểu tóc Layer nam"
+          />
+
+          <h3>💡 Cách chăm sóc & tạo kiểu</h3>
+          <p>
+            Để giữ form tóc Layer đẹp, nên sấy khô sau khi gội, dùng lược tròn
+            để tạo độ cong nhẹ ở phần mái. Có thể dùng sáp mềm hoặc serum dưỡng
+            tóc để tăng độ bóng mượt và nếp tự nhiên.
+          </p>
+
+          <div class="highlight">
+            👉 Mẹo nhỏ: Khi sấy, chia tóc thành từng tầng và hất nhẹ ra ngoài –
+            tóc sẽ có độ phồng tự nhiên như sao Hàn.
+          </div>
+
+          <h3>📸 Gallery Layer</h3>
+          <div class="gallery">
+            <img src="img/layer1.jpg" alt="Layer 1" />
+            <img src="img/layer2.jpg" alt="Layer 2" />
+            <img src="img/layer3.jpg" alt="Layer 3" />
+            <img src="img/layer4.jpg" alt="Layer 4" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 👇 Nút bấm nằm ngoài more-content -->
+      <button class="toggle-btn" onclick="toggleContent(this)">
+        Xem thêm ▼
+      </button>
+    </section>
+    <!-- ===== MOHICAN ===== -->
+    <section class="hairstyle" id="mohican">
+      <h2>🔥 Kiểu Tóc Mohican (Năng Động & Cá Tính)</h2>
+
+      <img
+        src="img/mohican.jpeg"
+        alt="Kiểu tóc Mohican hiện đại tại Thái Barber"
+      />
+
+      <p>
+        <b>Mohican</b> là kiểu tóc được yêu thích bởi sự mạnh mẽ, trẻ trung và
+        đậm chất thể thao. Với đặc trưng cắt ngắn hai bên, để dài và vuốt dựng
+        phần giữa, Mohican giúp gương mặt thêm góc cạnh và khỏe khoắn.
+      </p>
+      <div class="more-content">
+        <div class="more-inner">
+          <div class="highlight">
+            ✨ Điểm đặc biệt: Mohican là kiểu tóc dành cho những ai muốn khẳng
+            định cá tính, mang đến vẻ ngoài năng động, sôi nổi và tràn đầy năng
+            lượng.
+          </div>
+
+          <h3>🔥 Ưu điểm nổi bật</h3>
+          <ul>
+            <li>Tạo vẻ ngoài <b>nam tính, khỏe mạnh</b>.</li>
+            <li>
+              Thích hợp cho <b>mọi độ tuổi</b> – học sinh, sinh viên, dân văn
+              phòng.
+            </li>
+            <li>Dễ chăm sóc, chỉ cần vuốt sáp hoặc gel mỗi sáng.</li>
+            <li>Phù hợp với người thích phong cách gọn gàng, thể thao.</li>
+          </ul>
+
+          <img src="img/mohican-side.jpg" alt="Góc nghiêng tóc Mohican" />
+
+          <h3>📌 Các biến thể phổ biến</h3>
+          <ul>
+            <li>
+              <b>Mohican Fade:</b> Tỉa mờ hai bên, tạo cảm giác hiện đại và gọn
+              gàng.
+            </li>
+            <li>
+              <b>Mohican Layer:</b> Kết hợp layer nhẹ giúp tóc tự nhiên và mềm
+              mại hơn.
+            </li>
+            <li>
+              <b>Mohican Textured:</b> Tăng độ phồng, hợp cho tóc dày hoặc uốn
+              nhẹ.
+            </li>
+          </ul>
+
+          <img
+            src="img/mohican-variants.jpg"
+            alt="Các kiểu Mohican tại Thái Barber"
+          />
+
+          <h3>💡 Cách chăm sóc & tạo kiểu</h3>
+          <p>
+            Sau khi gội, sấy tóc theo chiều dựng để tạo form, dùng sáp có độ giữ
+            nếp mạnh hoặc gel để cố định. Có thể thêm keo xịt tóc để giữ nếp lâu
+            cả ngày.
+          </p>
+
+          <div class="highlight">
+            👉 Mẹo nhỏ: Nếu tóc bạn mềm hoặc dễ xẹp, hãy sấy ngược chiều mọc tóc
+            trước khi vuốt sáp.
+          </div>
+
+          <h3>📸 Gallery Mohican</h3>
+          <div class="gallery">
+            <img src="img/mohican1.jpg" alt="Mohican 1" />
+            <img src="img/mohican2.jpg" alt="Mohican 2" />
+            <img src="img/mohican3.jpg" alt="Mohican 3" />
+            <img src="img/mohican4.jpg" alt="Mohican 4" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 👇 Nút bấm nằm ngoài more-content -->
+      <button class="toggle-btn" onclick="toggleContent(this)">
+        Xem thêm ▼
+      </button>
+    </section>
+
+    <!-- ===== QUIFF ===== -->
+    <section class="hairstyle" id="quiff">
+      <h2>💨 Kiểu Tóc Quiff (Phồng Tự Nhiên & Cá Tính)</h2>
+
+      <img
+        src="img/quiff-main.jpg"
+        alt="Kiểu tóc Quiff phồng tự nhiên tại Thái Barber"
+      />
+
+      <p>
+        <b>Quiff</b> là kiểu tóc mang phong cách châu Âu, nổi bật với phần mái
+        dài được vuốt ngược ra sau, tạo độ phồng tự nhiên nhưng vẫn gọn gàng.
+        Đây là kiểu tóc vừa lịch sự, vừa mang nét phóng khoáng.
+      </p>
+      <div class="more-content">
+        <div class="more-inner">
+          <div class="highlight">
+            ✨ Điểm đặc biệt: Quiff giúp tăng chiều cao khuôn mặt và phù hợp với
+            người có trán thấp hoặc khuôn mặt tròn.
+          </div>
+
+          <h3>🔥 Ưu điểm nổi bật</h3>
+          <ul>
+            <li>Giúp khuôn mặt <b>thanh thoát và cân đối hơn</b>.</li>
+            <li>Dễ tùy chỉnh: vuốt cao, vuốt nhẹ hoặc phồng tự nhiên.</li>
+            <li>Phù hợp với cả môi trường công sở và dự tiệc.</li>
+            <li>Tạo phong thái <b>lịch lãm, trưởng thành</b>.</li>
+          </ul>
+
+          <img src="img/quiff-side.jpg" alt="Góc nghiêng tóc Quiff" />
+
+          <h3>📌 Các biến thể phổ biến</h3>
+          <ul>
+            <li>
+              <b>Classic Quiff:</b> Vuốt ngược truyền thống, độ phồng vừa phải.
+            </li>
+            <li>
+              <b>Textured Quiff:</b> Tóc phồng nhẹ, tự nhiên, ít dùng gel.
+            </li>
+            <li>
+              <b>Messy Quiff:</b> Phong cách rối nhẹ, trẻ trung, phá cách.
+            </li>
+          </ul>
+
+          <img src="img/quiff-variants.jpg" alt="Các biến thể Quiff" />
+
+          <h3>💡 Cách chăm sóc & tạo kiểu</h3>
+          <p>
+            Khi sấy tóc, dùng lược tròn kết hợp sấy hướng lên để tạo phồng. Vuốt
+            sáp từ chân đến ngọn để giữ form tự nhiên. Có thể xịt thêm keo để
+            tóc đứng lâu hơn.
+          </p>
+
+          <div class="highlight">
+            👉 Mẹo nhỏ: Nếu tóc quá dày, nên tỉa mỏng phần đỉnh để dễ tạo form
+            Quiff đẹp hơn.
+          </div>
+
+          <h3>📸 Gallery Quiff</h3>
+          <div class="gallery">
+            <img src="img/quiff1.jpg" alt="Quiff 1" />
+            <img src="img/quiff2.jpg" alt="Quiff 2" />
+            <img src="img/quiff3.jpg" alt="Quiff 3" />
+            <img src="img/quiff4.jpg" alt="Quiff 4" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 👇 Nút bấm nằm ngoài more-content -->
+      <button class="toggle-btn" onclick="toggleContent(this)">
+        Xem thêm ▼
+      </button>
+    </section>
+
+    <!-- ===== POMPADOUR ===== -->
+    <section class="hairstyle" id="pompadour">
+      <h2>🎩 Kiểu Tóc Pompadour (Quý Ông Lịch Lãm)</h2>
+
+      <img
+        src="img/pompadour-main.jpg"
+        alt="Kiểu tóc Pompadour quý ông tại Thái Barber"
+      />
+
+      <p>
+        <b>Pompadour</b> là kiểu tóc mang hơi hướng cổ điển, đặc trưng bởi phần
+        mái dài được vuốt ngược cao lên và ôm ra sau. Đây là lựa chọn lý tưởng
+        cho những ai muốn thể hiện phong cách <b>quý ông sang trọng</b> và lịch
+        lãm.
+      </p>
+      <div class="more-content">
+        <div class="more-inner">
+          <div class="highlight">
+            ✨ Điểm đặc biệt: Pompadour tạo độ dày và chiều cao cho phần mái,
+            giúp khuôn mặt cân đối và cuốn hút hơn.
+          </div>
+
+          <h3>🔥 Ưu điểm nổi bật</h3>
+          <ul>
+            <li>Phong cách <b>trưởng thành, lịch lãm</b>.</li>
+            <li>Tạo cảm giác khuôn mặt <b>dài và thon hơn</b>.</li>
+            <li>Thể hiện đẳng cấp và sự tự tin của người đàn ông hiện đại.</li>
+            <li>
+              Phù hợp với các sự kiện, buổi tiệc, hoặc môi trường công sở cao
+              cấp.
+            </li>
+          </ul>
+
+          <img src="img/pompadour-side.jpg" alt="Góc nghiêng tóc Pompadour" />
+
+          <h3>📌 Các biến thể phổ biến</h3>
+          <ul>
+            <li><b>Classic Pompadour:</b> Vuốt phồng cao, đậm chất cổ điển.</li>
+            <li>
+              <b>Modern Pompadour:</b> Phối fade nhẹ, trẻ trung và thời thượng.
+            </li>
+            <li>
+              <b>Short Pompadour:</b> Phù hợp với người thích kiểu gọn gàng.
+            </li>
+          </ul>
+
+          <img src="img/pompadour-variants.jpg" alt="Các kiểu tóc Pompadour" />
+
+          <h3>💡 Cách chăm sóc & tạo kiểu</h3>
+          <p>
+            Sau khi gội, sấy tóc từ chân lên để tạo độ phồng, sau đó dùng pomade
+            hoặc sáp bóng để vuốt ngược và định hình. Giữ nếp bằng keo xịt tóc
+            nhẹ.
+          </p>
+
+          <div class="highlight">
+            👉 Mẹo nhỏ: Dùng pomade gốc nước để tạo độ bóng nhẹ, tóc vừa mềm vừa
+            dễ chỉnh lại trong ngày.
+          </div>
+
+          <h3>📸 Gallery Pompadour</h3>
+          <div class="gallery">
+            <img src="img/pompadour1.jpg" alt="Pompadour 1" />
+            <img src="img/pompadour2.jpg" alt="Pompadour 2" />
+            <img src="img/pompadour3.jpg" alt="Pompadour 3" />
+            <img src="img/pompadour4.jpg" alt="Pompadour 4" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 👇 Nút bấm nằm ngoài more-content -->
+      <button class="toggle-btn" onclick="toggleContent(this)">
+        Xem thêm ▼
+      </button>
+    </section>
+
     <footer>
       <div class="footer-bottom">© 2025 Thái Barber | Nam Định - Việt Nam</div>
     </footer>
 
+    <!-- ===== LIGHTBOX ===== -->
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <span class="prev">&#10094;</span>
+      <img class="lightbox-content" id="lightbox-img" alt="" />
+      <span class="next">&#10095;</span>
+    </div>
+
+    <!-- ===== SCRIPT ===== -->
     <script>
       function toggleMenu() {
         document.getElementById("nav-menu").classList.toggle("show");
       }
+
+      // ==== Hiệu ứng ảnh Lightbox ====
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const closeBtn = document.querySelector(".lightbox .close");
+      const prevBtn = document.querySelector(".lightbox .prev");
+      const nextBtn = document.querySelector(".lightbox .next");
+      const galleryImages = document.querySelectorAll(
+        ".gallery img, .hairstyle img"
+      );
+
+      let currentIndex = 0;
+
+      function showImage(index) {
+        if (index < 0) index = galleryImages.length - 1;
+        if (index >= galleryImages.length) index = 0;
+        currentIndex = index;
+        lightboxImg.style.opacity = 0;
+        setTimeout(() => {
+          lightboxImg.src = galleryImages[index].src;
+          lightboxImg.style.opacity = 1;
+        }, 150);
+      }
+
+      galleryImages.forEach((img, index) => {
+        img.addEventListener("click", () => {
+          lightbox.style.display = "flex";
+          showImage(index);
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+      });
+
+      nextBtn.addEventListener("click", () => showImage(currentIndex + 1));
+      prevBtn.addEventListener("click", () => showImage(currentIndex - 1));
+
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) lightbox.style.display = "none";
+      });
+
+      // Vuốt cảm ứng
+      let startX = 0;
+      lightbox.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+      });
+      lightbox.addEventListener("touchend", (e) => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) showImage(currentIndex + 1);
+        if (endX - startX > 50) showImage(currentIndex - 1);
+      });
+
+      // Bàn phím ← → Esc
+      document.addEventListener("keydown", (e) => {
+        if (lightbox.style.display === "flex") {
+          if (e.key === "ArrowRight") showImage(currentIndex + 1);
+          if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+          if (e.key === "Escape") lightbox.style.display = "none";
+        }
+      });
+    </script>
+    <script>
+      function toggleContent(btn) {
+        const allSections = document.querySelectorAll(".hairstyle");
+        const section = btn.closest(".hairstyle");
+        const content = section.querySelector(".more-content");
+
+        // Đóng các phần khác
+        allSections.forEach((sec) => {
+          const otherContent = sec.querySelector(".more-content");
+          const otherBtn = sec.querySelector(".toggle-btn");
+          if (otherContent !== content) {
+            otherContent.classList.remove("show");
+            if (otherBtn) otherBtn.textContent = "Xem thêm ▼"; // ✅ tránh null
+          }
+        });
+
+        // Mở hoặc đóng phần hiện tại
+        if (content.classList.contains("show")) {
+          content.classList.remove("show");
+          btn.textContent = "Xem thêm ▼";
+        } else {
+          content.classList.add("show");
+          btn.textContent = "Thu gọn ▲";
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+      window.addEventListener("scroll", () => {
+        const openSection = document.querySelector(".more-content.show");
+        if (openSection) {
+          const rect = openSection.getBoundingClientRect();
+          if (rect.bottom < 0 || rect.top > window.innerHeight + 200) {
+            openSection.classList.remove("show");
+            const btn = openSection
+              .closest(".hairstyle")
+              .querySelector(".toggle-btn");
+            if (btn) btn.textContent = "Xem thêm ▼";
+          }
+        }
+      });
+      galleryImages.forEach((img, index) => {
+        img.addEventListener("click", () => {
+          lightbox.style.display = "flex";
+          document.body.style.overflow = "hidden"; // chặn cuộn
+          showImage(index);
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        lightbox.classList.add("hide");
+        setTimeout(() => {
+          lightbox.style.display = "none";
+          lightbox.classList.remove("hide");
+          document.body.style.overflow = "auto";
+        }, 300);
+      });
     </script>
   </body>
 </html>
