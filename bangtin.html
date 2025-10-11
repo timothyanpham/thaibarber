@@ -4,23 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Tiêu đề SEO -->
     <title>Bảng Tin - Thái Barber Nam Định</title>
-
-    <!-- Mô tả ngắn gọn cho Google -->
     <meta
       name="description"
       content="Cập nhật bảng tin, khuyến mãi và các hoạt động mới nhất từ Thái Barber - Tiệm cắt tóc nam phong cách hiện đại tại Nam Định."
     />
     <meta name="author" content="Thái Barber Nam Định" />
-    <link rel="canonical" href="https://www.thaibarber.net/bangtin.html" />
-    <!-- Từ khóa SEO -->
     <meta
       name="keywords"
       content="bảng tin Thái Barber, tin tức cắt tóc Nam Định, khuyến mãi barber Nam Định"
     />
 
-    <!-- Open Graph khi chia sẻ Facebook/Zalo -->
     <meta property="og:title" content="Bảng Tin - Thái Barber Nam Định" />
     <meta
       property="og:description"
@@ -33,107 +27,181 @@
     <meta property="og:url" content="https://www.thaibarber.net/bangtin.html" />
     <meta property="og:type" content="article" />
 
-    <!-- Favicon -->
     <link rel="icon" href="logo.jpg" />
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
     <style>
+      /* ===== CẤU TRÚC CHUNG ===== */
+      body {
+        background: #f0f2f5;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        color: #333;
+        line-height: 1.6;
+      }
+
       .container {
-        max-width: 1200px;
+        max-width: 800px;
         margin: 0 auto;
-        padding: 0 15px;
+        padding: 20px 15px 60px;
       }
-      .news-img img:hover {
-        transform: scale(1.03);
-        transition: 0.3s;
-      }
+
       h2 {
         text-align: center;
         color: #1877f2;
-        margin: 20px 0;
+        font-size: 1.6rem;
+        margin: 25px 0;
       }
 
-      /* Navbar */
-      /* .nav-right li a[href="index.html"] {
+      /* ===== BÀI BẢNG TIN ===== */
+      section.news {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* ẢNH */
+      .news-img {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .news-img img {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      .news-img img:hover {
+        transform: scale(1.02);
+      }
+
+      /* VIDEO */
+      .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 177%; /* 9:16 - shorts */
+        height: 0;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        margin-bottom: 15px;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .video-caption {
+        text-align: center;
+        font-size: 0.95rem;
+        color: #555;
+        margin: 5px 0 10px;
+      }
+
+      /* TIÊU ĐỀ + NỘI DUNG */
+      .news-text h3 {
+        color: #1877f2;
+        margin: 8px 0 10px;
+        font-size: 1.2rem;
+      }
+
+      .news-meta {
+        font-size: 0.9rem;
+        color: #777;
+        margin-bottom: 10px;
+      }
+
+      .news-text p {
+        margin-bottom: 10px;
+      }
+
+      .news-points {
+        margin: 8px 0 12px 18px;
+      }
+
+      /* NÚT XEM TRÊN YOUTUBE */
+      .watch-on-yt {
+        display: block;
+        width: fit-content;
+        margin: 10px auto 0;
+        padding: 8px 14px;
+        border: 1px solid #1877f2;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #1877f2;
         font-weight: bold;
-        font-size: 1.1em;
+        transition: 0.3s;
+      }
+
+      .watch-on-yt:hover {
         background: #1877f2;
         color: #fff;
-        padding: 6px 12px;
-        border-radius: 6px;
-        text-transform: uppercase;
       }
-      .nav-right li a[href="index.html"]:hover {
-        background: #145dbf;
-      } */
 
-      /* Bảng tin section */
-      section.news {
-        display: flex;
-        gap: 20px;
+      /* ===== FOOTER ===== */
+      footer {
+        text-align: center;
         background: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        align-items: center;
-      }
-      .news-text {
-        flex: 1;
-      }
-      .news-text h3 {
-        margin-top: 0;
-        color: #333;
-      }
-      .news-img {
-        flex: 1;
-      }
-      .news-img img {
-        max-width: 100%;
-        border-radius: 10px;
+        padding: 15px 0;
+        color: #555;
+        font-size: 0.9rem;
+        border-top: 1px solid #ddd;
       }
 
-      /* Responsive: khi màn hình nhỏ thì xuống 1 cột */
+      /* ===== MOBILE ===== */
       @media (max-width: 768px) {
-        section.news {
-          flex-direction: column;
+        .container {
+          padding: 15px;
+        }
+        h2 {
+          font-size: 1.4rem;
         }
       }
     </style>
   </head>
+
   <body>
+    <!-- ===== NAVBAR ===== -->
     <header>
-      <!-- ===== NAVBAR ===== -->
       <nav class="navbar">
         <a href="index.html" class="nav-left">
           <img src="img/logo.jpg" alt="Logo" class="nav-logo" />
-          <span class="brand">Thái Barber</span>
+          <span class="brand">Thái Barber - 627 Giải Phóng</span>
         </a>
-
-        <!-- Nút hamburger đẹp -->
         <div class="hamburger" onclick="toggleMenu()">
           <i class="fas fa-bars"></i>
         </div>
-
         <ul class="nav-right" id="nav-menu">
           <li><a href="index.html">Trang chủ</a></li>
-          <li><a href="bangtin.html">Bảng Tin</a></li>
+          <li><a href="bangtin.html" class="active">Bảng Tin</a></li>
           <li><a href="tocdep.html">Tóc Đẹp</a></li>
         </ul>
       </nav>
     </header>
 
+    <!-- ===== NỘI DUNG ===== -->
     <main class="container">
       <h2>📢 Bảng Tin Thái Barber</h2>
+
+      <!-- BÀI 1 -->
       <section class="news">
+        <div class="news-img">
+          <img src="img/uontoc.jpg" alt="Uốn tóc tại Thái Barber" />
+        </div>
         <div class="news-text">
-          <h3>Hôm nay tiệm có ông em ra làm quả uốn tóc.</h3>
+          <h3>Hôm nay tiệm có ông em ra làm quả uốn tóc 💈</h3>
           <p>
             Ngồi ghế vừa cầm điện thoại chơi game 🎮, vừa để thợ quấn từng lô.
             Nhìn nghiêm túc lắm nhưng chắc trong bụng đang nghĩ: “Không biết ra
@@ -141,16 +209,57 @@
           </p>
           <p>Anh em nào muốn thử đổi gió thì qua tiệm test luôn nhé 💈.</p>
         </div>
-        <div class="news-img">
-          <img src="img/uontoc.jpg" alt="Uốn tóc tại Thái Barber" />
+      </section>
+
+      <!-- BÀI 2 -->
+      <section class="news">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/Gd0frezhDb0"
+            title="Uốn messy fringe curly cho zai đẹp - Thái Barber"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="news-text">
+          <h3>Uốn messy fringe curly cho zai đẹp 💈</h3>
+          <p class="news-meta">
+            Đăng: 2025-10-10 · Chuyên mục: Uốn tóc, Messy Fringe
+          </p>
+          <p>
+            Kiểu <strong>messy fringe curly</strong> cho phần mái bồng, nhẹ và
+            có độ cong tự nhiên, hợp mặt tròn/oval. Ưu điểm là dễ sấy, dễ vào
+            nếp, nhìn vừa thư sinh vừa cá tính.
+          </p>
+          <ul class="news-points">
+            <li>Độ uốn: lô nhỏ – trung bình, giữ phồng ở mái.</li>
+            <li>Styling nhanh: sấy hướng từ dưới lên + vuốt sáp mờ (matte).</li>
+            <li>Phù hợp: tóc dày vừa, sợi mềm đến trung bình.</li>
+          </ul>
+          <p>
+            👉 Xem video demo chi tiết bên dưới. Muốn thử ngay? Hãy tới ngay
+            <a href="https://maps.app.goo.gl/8g2Z5j3uH9QT96Zt6" target="_blank"
+              >Thái Barber - 627 Giải Phóng, P. Trường Thi, Ninh Bình</a
+            >
+            nhé!
+          </p>
+          <a
+            class="watch-on-yt"
+            href="https://www.youtube.com/watch?v=Gd0frezhDb0"
+            target="_blank"
+            rel="noopener"
+            >Xem trên YouTube</a
+          >
         </div>
       </section>
     </main>
+
+    <!-- ===== FOOTER ===== -->
     <footer>
-      <div class="footer-bottom">
-        <p>© 2025 Thái Barber - Nam Định. All rights reserved.</p>
-      </div>
+      <p>© 2025 Thái Barber - Nam Định. All rights reserved.</p>
     </footer>
+
     <script>
       function toggleMenu() {
         document.getElementById("nav-menu").classList.toggle("show");
