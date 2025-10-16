@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thai Barber - Modern Men's Haircuts in Nam Dinh</title>
+    <meta
+      name="description"
+      content="Men's haircuts, perms, and modern styling in Nam Dinh. Visit Thai Barber at 627 Giai Phong."
+    />
+    <link rel="icon" href="../img/logo.jpg" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="alternate"
+      hreflang="vi"
+      href="https://www.thaibarber.net/index.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.thaibarber.net/en/index.html"
+    />
+    <link rel="canonical" href="https://www.thaibarber.net/en/index.html" />
+  </head>
+
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+      <a href="index.html" class="nav-left">
+        <img src="../img/logo.jpg" alt="Logo" class="nav-logo" />
+        <span class="brand">Thai Barber - 627 Giai Phong</span>
+      </a>
+
+      <!-- Hamburger button for mobile -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <ul class="nav-right" id="nav-menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./news.html">News</a></li>
+        <li><a href="./styles.html">Styles</a></li>
+        <li>
+          <a id="to-vi" href="#">VI</a> |
+          <a id="to-en" class="active-lang" href="#">EN</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ===== COVER ===== -->
+    <div class="cover">
+      <img src="../img/bia.jpg" alt="Thai Barber Cover" class="cover-img" />
+    </div>
+
+    <!-- ===== MAIN LAYOUT ===== -->
+    <div class="container">
+      <!-- Left sidebar -->
+      <aside class="sidebar">
+        <img src="../img/logo.jpg" alt="Thai Barber" class="profile-logo" />
+        <h2>Thai Barber</h2>
+        <p>Modern Men's Haircuts in Nam Dinh</p>
+
+        <!-- Popular hairstyles -->
+        <section id="styles" class="card">
+          <h3>Popular Hairstyles</h3>
+          <div class="styles">
+            <!-- Undercut -->
+            <a href="styles.html#undercut" class="style-link">
+              <div class="style-card">
+                <img src="../img/undercut.jpeg" alt="Undercut style" />
+                <h4>Undercut</h4>
+                <p>Modern look, shaved sides, longer top.</p>
+              </div>
+            </a>
+
+            <!-- Side Part -->
+            <a href="styles.html#sidepart" class="style-link">
+              <div class="style-card">
+                <img src="../img/sidepart.jpg" alt="Side Part style" />
+                <h4>Side Part</h4>
+                <p>Elegant, 7/3 or 6/4 split, perfect for office style.</p>
+              </div>
+            </a>
+
+            <!-- Layer -->
+            <a href="styles.html#layer" class="style-link">
+              <div class="style-card">
+                <img src="../img/layer.jpg" alt="Layer style" />
+                <h4>Layer</h4>
+                <p>Soft, natural flow with youthful Korean trend.</p>
+              </div>
+            </a>
+
+            <!-- Mohican -->
+            <a href="styles.html#mohican" class="style-link">
+              <div class="style-card">
+                <img src="../img/mohican.jpeg" alt="Mohican style" />
+                <h4>Mohican</h4>
+                <p>Short sides, raised fringe, energetic look.</p>
+              </div>
+            </a>
+
+            <!-- Quiff -->
+            <a href="styles.html#quiff" class="style-link">
+              <div class="style-card">
+                <img src="../img/quiff.webp" alt="Quiff style" />
+                <h4>Quiff</h4>
+                <p>Voluminous top, natural lift, full of confidence.</p>
+              </div>
+            </a>
+
+            <!-- Pompadour -->
+            <a href="styles.html#pompadour" class="style-link">
+              <div class="style-card">
+                <img src="../img/pompadour.jpg" alt="Pompadour style" />
+                <h4>Pompadour</h4>
+                <p>Slicked-back top, classy gentleman style.</p>
+              </div>
+            </a>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Main content -->
+      <main class="content">
+        <!-- About -->
+        <section id="about" class="card about">
+          <h3>About the Barbershop</h3>
+          <div class="about-text">
+            <p>
+              <strong>Thai Barber</strong> is proud to be a modern men's
+              barbershop in <b>Nam Dinh</b>, offering youthful, elegant styles
+              that always stay on trend.
+            </p>
+            <ul>
+              <li>
+                A <b>comfortable and classy space</b> for a relaxing experience.
+              </li>
+              <li>
+                A team of <b>experienced barbers</b> dedicated to every detail.
+              </li>
+              <li>
+                A variety of services:
+                <i>Haircuts, shampoo, perms/coloring, relaxing massage.</i>
+              </li>
+              <li>
+                Always updated with trending styles:
+                <i>Undercut, Mohican, Side Part, Layer...</i>
+              </li>
+            </ul>
+            <p class="slogan">
+              Motto:
+              <b>“Being handsome isn’t just about looks — it’s a lifestyle.”</b>
+              Thai Barber is committed to delivering complete satisfaction.
+            </p>
+          </div>
+
+          <!-- Image under text -->
+          <div class="about-img">
+            <img src="../img/ben-trong.jpg" alt="Inside Thai Barber" />
+          </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="card">
+          <h3>Services</h3>
+          <div class="services">
+            <div class="service-card">
+              <i class="fas fa-cut"></i>
+              <h4>Men’s Haircut</h4>
+              <p>Personalized styling for your face shape and modern trends.</p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-burn"></i>
+              <h4>Perm / Coloring</h4>
+              <p>Updated styles using safe, high-quality hair products.</p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-spa"></i>
+              <h4>Relax Combo</h4>
+              <p>
+                Cut + wash + massage — refreshing and comfortable experience.
+              </p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-smile"></i>
+              <h4>Facial Care</h4>
+              <p>
+                Steam, pore extraction, exfoliation for clean and healthy skin.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Price list -->
+        <section id="prices" class="card">
+          <h3>Service Price List</h3>
+          <h4>Haircuts</h4>
+          <ul class="price-list">
+            <li><span>Children</span><span>30 – 40k</span></li>
+            <li><span>Elementary Students</span><span>50k</span></li>
+            <li><span>Middle & High School</span><span>60k</span></li>
+            <li><span>Adults (18+)</span><span>70k</span></li>
+            <li><span>Combo: Cut + Wash</span><span>110k</span></li>
+          </ul>
+
+          <h4>Services</h4>
+          <ul class="price-list">
+            <li><span>Ear Cleaning</span><span>20 – 30k</span></li>
+            <li><span>Exfoliation</span><span>10k</span></li>
+            <li><span>Steam + Blackhead Removal</span><span>30k</span></li>
+            <li><span>Blackhead Peel</span><span>20k</span></li>
+          </ul>
+
+          <h4>Chemical Treatments</h4>
+          <ul class="price-list">
+            <li><span>Volume Perm</span><span>300 – 400k</span></li>
+            <li><span>Deep Perm</span><span>400 – 500k</span></li>
+            <li><span>Ruffled Perm</span><span>500 – 600k</span></li>
+            <li><span>Hair Coloring</span><span>150 – 500k</span></li>
+            <li><span>Highlights</span><span>350 – 450k</span></li>
+            <li><span>Platinum</span><span>600 – 700k</span></li>
+          </ul>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery">
+          <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <span class="prev">&#10094;</span>
+            <img class="lightbox-content" id="lightbox-img" alt="" />
+            <span class="next">&#10095;</span>
+          </div>
+
+          <h2>📸 Real Haircut Gallery</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="../img/album.jpg" alt="Shop Interior" />
+            </div>
+            <div class="gallery-item">
+              <img src="../img/album2.jpg" alt="Customer Haircut" />
+            </div>
+            <div class="gallery-item">
+              <img src="../img/album3.jpg" alt="Modern Equipment" />
+            </div>
+            <div class="gallery-item">
+              <img src="../img/album4.jpg" alt="Final Hairstyle" />
+            </div>
+            <div class="gallery-item">
+              <img src="../img/album5.jpg" alt="Decorated Space" />
+            </div>
+            <div class="gallery-item">
+              <img src="../img/album6.jpg" alt="Happy Customer" />
+            </div>
+          </div>
+
+          <!-- More hidden photos -->
+          <div class="more-content">
+            <div class="gallery-grid">
+              <div class="gallery-item">
+                <img src="../img/album7.jpeg" alt="Happy Customer" />
+              </div>
+              <div class="gallery-item">
+                <img src="../img/album8.jpeg" alt="Happy Customer" />
+              </div>
+              <div class="gallery-item">
+                <img src="../img/album9.jpeg" alt="Happy Customer" />
+              </div>
+              <div class="gallery-item">
+                <img src="../img/album10.jpeg" alt="Happy Customer" />
+              </div>
+              <!-- ... (giữ nguyên các ảnh 11 → 30 như bản Việt) ... -->
+            </div>
+          </div>
+
+          <div class="gallery-toggle">
+            <button class="toggle-btn" onclick="toggleContent(this)">
+              <span class="label">Show more</span>
+              <span class="arrow">▼</span>
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <!-- Right sidebar -->
+      <aside class="sidebar-right">
+        <section id="booking" class="card">
+          <h3>Book an Appointment</h3>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdI4MlyrW7hnuFAD-g5P2rpM5dg46wERG64FZsgBYN2GFhpCQ/viewform?embedded=true"
+            width="100%"
+            height="1000px"
+            frameborder="0"
+          >
+            Loading…
+          </iframe>
+        </section>
+
+        <section id="contact" class="card">
+          <h3>Contact</h3>
+          <p><i class="fas fa-user"></i> <span>Mr. Thai</span></p>
+          <p>
+            <i class="fas fa-location-dot"></i>
+            <span>627 Giai Phong, Truong Thi Ward, Nam Dinh</span>
+          </p>
+          <p><i class="fas fa-phone"></i> <span>0989 100 419</span></p>
+          <p>
+            <i class="fab fa-facebook"></i>
+            Personal FB:
+            <a href="https://www.facebook.com/DanienThai" target="_blank"
+              >Thai Barber</a
+            >
+          </p>
+          <p>
+            <i class="fab fa-facebook"></i>
+            Fanpage:
+            <a href="https://www.facebook.com/thaibarber627/" target="_blank"
+              >Thai Barber Official</a
+            >
+          </p>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3739.191996279446!2d106.1613559!3d20.4161788!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135e10db150c6ed%3A0x1ee93d16bfaf3d7!2zQ-G6r3QgVMOzYyBOYW0gLSBUaMOhaSBCYXJiZXI!5e0!3m2!1sen!2sjp!4v1758250187166!5m2!1sen!2sjp"
+            width="100%"
+            height="250"
+            style="border: 0; border-radius: 8px; margin-top: 10px"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </section>
+
+        <section class="home-news">
+          <h2>📰 Latest News</h2>
+          <ul class="news-list">
+            <li>
+              <a href="news.html#premlock" target="_blank"
+                >Premlock perm for broad faces 💈</a
+              >
+            </li>
+            <li>
+              <a href="news.html#messy-fringe-curly" target="_blank"
+                >Messy fringe curly style 💈</a
+              >
+            </li>
+            <li>
+              <a href="news.html#perm-story"
+                >A client came for a perm today 💈</a
+              >
+            </li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="footer-bottom">
+        <p>© 2025 Thai Barber. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "109932117025498"); // Page ID
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v18.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+    <script>
+      function toggleMenu() {
+        document.getElementById("nav-menu").classList.toggle("show");
+      }
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        if (window.location.hash) {
+          const target = document.querySelector(window.location.hash);
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      });
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Thai Barber Nam Dinh",
+        "image": "https://www.thaibarber.net/img/logo.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "627 Giai Phong, Nam Dinh",
+          "addressLocality": "Nam Dinh",
+          "addressCountry": "VN"
+        },
+        "telephone": "+84-989-100-419",
+        "openingHours": "Mo-Su 08:00-20:00",
+        "url": "https://www.thaibarber.net/en/index.html"
+      }
+    </script>
+
+    <script>
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const closeBtn = document.querySelector(".lightbox .close");
+      const prevBtn = document.querySelector(".lightbox .prev");
+      const nextBtn = document.querySelector(".lightbox .next");
+      const galleryImages = document.querySelectorAll(".gallery-item img");
+
+      let currentIndex = 0;
+
+      // Hiển thị ảnh theo index
+      function showImage(index) {
+        if (index < 0) index = galleryImages.length - 1;
+        if (index >= galleryImages.length) index = 0;
+        currentIndex = index;
+        lightboxImg.src = galleryImages[index].src;
+      }
+
+      // Khi click ảnh trong album
+      galleryImages.forEach((img, index) => {
+        img.addEventListener("click", () => {
+          lightbox.style.display = "flex";
+          showImage(index);
+        });
+      });
+
+      // Đóng lightbox
+      closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+      });
+
+      // Nút điều hướng trên màn hình
+      nextBtn.addEventListener("click", () => showImage(currentIndex + 1));
+      prevBtn.addEventListener("click", () => showImage(currentIndex - 1));
+
+      // Click ra ngoài ảnh để đóng
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = "none";
+        }
+      });
+
+      // Vuốt trên điện thoại
+      let startX = 0;
+      lightbox.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+      });
+      lightbox.addEventListener("touchend", (e) => {
+        let endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) showImage(currentIndex + 1); // vuốt trái
+        if (endX - startX > 50) showImage(currentIndex - 1); // vuốt phải
+      });
+
+      // 🎯 Bấm phím mũi tên trên bàn phím
+      document.addEventListener("keydown", (e) => {
+        if (lightbox.style.display === "flex") {
+          if (e.key === "ArrowRight") showImage(currentIndex + 1);
+          if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+          if (e.key === "Escape") lightbox.style.display = "none";
+        }
+      });
+    </script>
+    <script>
+      function toggleContent(btn) {
+        const moreContent = document.querySelector(".more-content");
+        const label = btn.querySelector(".label");
+        const arrow = btn.querySelector(".arrow");
+
+        moreContent.classList.toggle("show");
+
+        if (moreContent.classList.contains("show")) {
+          label.textContent = "Hide";
+          arrow.textContent = "▲";
+          moreContent.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          label.textContent = "Show more";
+          arrow.textContent = "▼";
+        }
+      }
+    </script>
+    <script>
+      document.getElementById("to-en").addEventListener("click", function (e) {
+        e.preventDefault();
+        const path = window.location.pathname;
+        if (path.includes("bangtin.html")) {
+          window.location.href = "../en/news.html";
+        } else if (path.includes("tocdep.html")) {
+          window.location.href = "../en/styles.html";
+        } else {
+          window.location.href = "../en/index.html";
+        }
+      });
+
+      document.getElementById("to-vi").addEventListener("click", function (e) {
+        e.preventDefault();
+        const path = window.location.pathname;
+        if (path.includes("news.html")) {
+          window.location.href = "../bangtin.html";
+        } else if (path.includes("styles.html")) {
+          window.location.href = "../tocdep.html";
+        } else {
+          window.location.href = "../index.html";
+        }
+      });
+    </script>
+  </body>
+</html>

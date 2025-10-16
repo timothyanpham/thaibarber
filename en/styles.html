@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Men’s Hairstyles in Nam Dinh - Thai Barber</title>
+
+    <meta
+      name="description"
+      content="Explore trendy men's hairstyles at Thai Barber Nam Dinh — from classic undercuts to modern Korean layers. Book your style today!"
+    />
+    <meta name="author" content="Thai Barber Nam Dinh" />
+    <meta
+      name="keywords"
+      content="men's haircut, trendy hairstyles, barber Nam Dinh, Thai Barber"
+    />
+
+    <meta
+      property="og:title"
+      content="Men’s Hairstyles - Thai Barber Nam Dinh"
+    />
+    <meta
+      property="og:description"
+      content="Discover modern men's hairstyles by Thai Barber. Professional barbers, fair prices, and stylish results."
+    />
+    <meta
+      property="og:image"
+      content="https://www.thaibarber.net/img/tocdep.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://www.thaibarber.net/en/styles.html"
+    />
+    <meta property="og:type" content="article" />
+
+    <link rel="icon" href="../logo.jpg" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="alternate"
+      hreflang="vi"
+      href="https://www.thaibarber.net/tocdep.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.thaibarber.net/en/styles.html"
+    />
+    <link rel="canonical" href="https://www.thaibarber.net/en/styles.html" />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* ===== INTRO ===== */
+      .intro {
+        background: linear-gradient(to right, #eaf2ff, #f9fbff);
+        padding: 40px 20px;
+        text-align: center;
+        border-bottom: 2px solid #1877f2;
+      }
+      .intro-content {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .intro h1 {
+        color: #1877f2;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+      .intro p {
+        font-size: 1.1em;
+        color: #444;
+        line-height: 1.7;
+        margin: 10px 0;
+      }
+      /* XEM THÊM */
+      @media (max-width: 600px) {
+        .lightbox img {
+          width: 95%;
+          height: auto;
+        }
+      }
+
+      .more-inner {
+        padding: 10px 0;
+        animation: fadeIn 0.4s ease;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .more-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.6s ease;
+      }
+      .more-content.show {
+        max-height: none;
+        overflow: hidden;
+        transition: max-height 0.6s ease;
+      }
+      .lightbox {
+        transition: opacity 0.3s ease;
+      }
+      .lightbox.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .toggle-btn {
+        display: block;
+        margin: 10px auto 0;
+        background: #1877f2;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .toggle-btn:hover {
+        background: #145dbf;
+      } /* ===== HAIRSTYLE SECTIONS ===== */
+      .hairstyle {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        line-height: 1.7;
+      }
+      .hairstyle h2 {
+        text-align: center;
+        color: #1877f2;
+        font-size: em;
+        margin-bottom: 10px;
+      }
+      .hairstyle h3 {
+        color: #333;
+        margin-top: 25px;
+        border-left: 5px solid #1877f2;
+        padding-left: 10px;
+      }
+      .hairstyle p {
+        color: #444;
+        margin-bottom: 15px;
+      }
+      .hairstyle img {
+        display: block;
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+      .hairstyle img:hover {
+        transform: scale(1.03);
+      }
+      .highlight {
+        background: #eef5ff;
+        padding: 12px;
+        border-left: 5px solid #1877f2;
+        margin: 20px 0;
+        font-style: italic;
+        color: #222;
+      }
+
+      /* Ảnh chính của từng kiểu tóc */
+      .hairstyle img:first-of-type {
+        width: 100%;
+        aspect-ratio: 16 / 9; /* hoặc 1 / 1 nếu bạn thích ảnh vuông */
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      /* Gallery đồng đều */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .gallery img {
+        max-width: 600px;
+        width: 100%;
+        border-radius: 8px;
+        margin: 15px auto;
+        object-fit: cover;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      }
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+      .hairstyle img:first-of-type {
+        width: 100%;
+        max-width: 600px; /* vẫn giữ, để không vượt quá khung */
+        aspect-ratio: 5 / 3; /* 🔹 khống chế chiều cao */
+        object-fit: cover; /* cắt đẹp, không méo */
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+      .hairstyle img:first-of-type:hover {
+        transform: scale(1.03);
+      }
+
+      /* Mobile gọn hơn */
+      @media (max-width: 768px) {
+        .hairstyle img:first-of-type {
+          aspect-ratio: 4 / 3;
+        }
+      }
+
+      /* ===== LIGHTBOX ===== */
+      .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        justify-content: center;
+        align-items: center;
+      }
+      .lightbox img {
+        max-width: 90%;
+        max-height: 85%;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        transition: opacity 0.3s ease;
+      }
+      .lightbox .close,
+      .lightbox .prev,
+      .lightbox .next {
+        position: absolute;
+        color: #fff;
+        font-size: 2.5em;
+        font-weight: bold;
+        cursor: pointer;
+        user-select: none;
+        transition: 0.3s;
+      }
+      .lightbox .close {
+        top: 25px;
+        right: 35px;
+      }
+      .lightbox .prev {
+        top: 50%;
+        left: 30px;
+        transform: translateY(-50%);
+      }
+      .lightbox .next {
+        top: 50%;
+        right: 30px;
+        transform: translateY(-50%);
+      }
+      .lightbox .prev:hover,
+      .lightbox .next:hover {
+        color: #ffcc00;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-right.show a:hover {
+          background: #f0f2f5;
+          color: #1877f2;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+      <a href="index.html" class="nav-left">
+        <img src="../img/logo.jpg" alt="Logo" class="nav-logo" />
+        <span class="brand">Thai Barber - 627 Giai Phong</span>
+      </a>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <ul class="nav-right" id="nav-menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./news.html">News</a></li>
+        <li><a href="./styles.html" aria-current="page">Styles</a></li>
+        <li>
+          <a id="to-vi" href="#">VI</a> |
+          <a id="to-en" class="active-lang" href="#">EN</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ===== INTRO ===== -->
+    <section class="intro">
+      <div class="intro-content">
+        <h1>💈 Men's Hair Style Collection at Thai Barber</h1>
+        <p>
+          Express your confidence and personality with
+          <b>Thai Barber Nam Dinh</b> — where modern, elegant, and stylish
+          haircuts are crafted by professional barbers.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== UNDERCUT ===== -->
+    <section class="hairstyle" id="undercut">
+      <h2>💈 Undercut Style</h2>
+
+      <img src="../img/undercut-main.jpg" alt="Modern Undercut Hairstyle" />
+
+      <p>
+        The <b>Undercut</b> has been one of the most popular men's hairstyles
+        for over a decade. Featuring <b>shaved sides and a longer top</b>, it
+        creates a strong contrast that adds sharpness and masculinity to your
+        look.
+      </p>
+
+      <div class="more-content">
+        <div class="more-inner">
+          <div class="highlight">
+            ✨ <b>Special point:</b> The Undercut looks
+            <b>smart and elegant</b> for work yet <b>cool and edgy</b> for
+            casual outings — truly a “2-in-1” hairstyle.
+          </div>
+
+          <h3>🔥 Key Advantages</h3>
+          <ul>
+            <li>Gives a <b>youthful and masculine</b> appearance.</li>
+            <li>Easy to restyle in many variations.</li>
+            <li>Fits most Asian face shapes.</li>
+            <li>Low maintenance – trim every 3–4 weeks.</li>
+          </ul>
+
+          <img src="../img/undercut-side.jpg" alt="Undercut side view" />
+
+          <h3>📌 Popular Variations</h3>
+          <ul>
+            <li><b>Slicked Back Undercut:</b> Gentleman and classy vibe.</li>
+            <li>
+              <b>Side Part Undercut:</b> 7/3 or 6/4 split, perfect for office
+              style.
+            </li>
+            <li>
+              <b>Mohican Undercut:</b> Short sides, raised fringe, youthful and
+              energetic.
+            </li>
+          </ul>
+
+          <img src="../img/undercut-variants.jpg" alt="Undercut variations" />
+
+          <h3>💡 Styling & Care Tips</h3>
+          <p>
+            Use <b>hair wax or pomade</b> to keep your Undercut in shape. Dry
+            your hair, use a comb to set form, then apply wax for longer hold.
+          </p>
+
+          <div class="highlight">
+            👉 Tip: Use a round brush with a hairdryer for a naturally
+            voluminous look.
+          </div>
+
+          <h3>📸 Undercut Gallery</h3>
+          <div class="gallery">
+            <img src="../img/undercut1.jpg" alt="Undercut 1" />
+            <img src="../img/undercut2.jpg" alt="Undercut 2" />
+            <img src="../img/undercut3.jpg" alt="Undercut 3" />
+            <img src="../img/undercut4.jpg" alt="Undercut 4" />
+          </div>
+        </div>
+      </div>
+      <button class="toggle-btn" onclick="toggleContent(this)">
+        Show more ▼
+      </button>
+    </section>
+
+    <!-- ===== SIDE PART ===== -->
+    <section class="hairstyle" id="sidepart">
+      <h2>✂️ Side Part (Elegant Split Style)</h2>
+
+      <img src="../img/sidepart-main.jpg" alt="Modern Side Part hairstyle" />
+
+      <p>
+        The <b>Side Part</b> is a timeless classic that never loses its charm.
+        With a 7/3 or 6/4 parting, it highlights a clean, mature, and stylish
+        look for any man.
+      </p>
+
+      <div class="more-content">
+        <div class="more-inner">
+          <div class="highlight">
+            ✨ <b>Special point:</b> The Side Part works everywhere — school,
+            work, or events. It’s a safe but very stylish choice.
+          </div>
+
+          <h3>🔥 Key Advantages</h3>
+          <ul>
+            <li>Gives a <b>neat and elegant</b> appearance.</li>
+            <li>Fits <b>all face shapes</b>, especially round or square.</li>
+            <li>Easy to style with a comb and light wax.</li>
+            <li>Perfect for students and office workers.</li>
+          </ul>
+
+          <img src="../img/sidepart-side.jpg" alt="Side Part side view" />
+
+          <h3>📌 Popular Variations</h3>
+          <ul>
+            <li>
+              <b>Classic Side Part:</b> Traditional and natural comb line.
+            </li>
+            <li>
+              <b>Low Fade Side Part:</b> Modern and youthful with low fade.
+            </li>
+            <li><b>Textured Side Part:</b> More volume and natural finish.</li>
+          </ul>
+
+          <img src="../img/sidepart-variants.jpg" alt="Side Part variations" />
+
+          <h3>💡 Styling & Care Tips</h3>
+          <p>
+            After washing, blow-dry following the part direction and apply a
+            small amount of wax to fix the shape.
+          </p>
+
+          <div class="highlight">
+            👉 Tip: Use a wide-tooth comb for natural volume without clumping.
+          </div>
+
+          <h3>📸 Side Part Gallery</h3>
+          <div class="gallery">
+            <img src="../img/sidepart1.jpg" alt="Side Part 1" />
+            <img src="../img/sidepart2.jpg" alt="Side Part 2" />
+            <img src="../img/sidepart3.jpg" alt="Side Part 3" />
+            <img src="../img/sidepart4.jpg" alt="Side Part 4" />
+          </div>
+        </div>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleContent(this)">
+        Show more ▼
+      </button>
+    </section>
+
+    <!-- ===== LAYER ===== -->
+    <section class="hairstyle" id="layer">
+      <h2>💇‍♂️ Layer Style (Natural & Youthful)</h2>
+
+      <img src="../img/layer-main.jpg" alt="Korean Men's Layer hairstyle" />
+
+      <p>
+        The <b>Layer</b> haircut features multiple lengths that create a
+        natural, soft, and voluminous look. A top choice for those who love
+        <b>Korean-inspired</b> modern and gentle styles.
+      </p>
+
+      <div class="more-content">
+        <div class="more-inner">
+          <div class="highlight">
+            ✨ <b>Special point:</b> Layer cuts can fit any face type — the more
+            natural, the better!
+          </div>
+
+          <h3>🔥 Key Advantages</h3>
+          <ul>
+            <li>Makes hair look <b>thicker and more voluminous</b>.</li>
+            <li>Works great with round faces.</li>
+            <li>Creates a <b>soft and youthful</b> impression.</li>
+            <li>Flexible: wavy, long, or curtain-layer versions.</li>
+          </ul>
+
+          <img src="../img/layer-side.jpg" alt="Layer hairstyle side view" />
+
+          <h3>📌 Popular Variations</h3>
+          <ul>
+            <li><b>Curtain Layer:</b> Korean-style flow, natural and soft.</li>
+            <li><b>Light Wavy Layer:</b> Adds bounce for fine or thin hair.</li>
+            <li>
+              <b>Long Layer:</b> Longer bangs for a romantic, stylish vibe.
+            </li>
+          </ul>
+
+          <img
+            src="../img/layer-variants.jpg"
+            alt="Layer hairstyle variations"
+          />
+
+          <h3>💡 Styling & Care Tips</h3>
+          <p>
+            Blow-dry after washing, using a round brush to curl the ends
+            slightly. Use light wax or hair serum for a soft, shiny finish.
+          </p>
+
+          <div class="highlight">
+            👉 Tip: Blow-dry each section gently outward for natural volume.
+          </div>
+
+          <h3>📸 Layer Gallery</h3>
+          <div class="gallery">
+            <img src="../img/layer1.jpg" alt="Layer 1" />
+            <img src="../img/layer2.jpg" alt="Layer 2" />
+            <img src="../img/layer3.jpg" alt="Layer 3" />
+            <img src="../img/layer4.jpg" alt="Layer 4" />
+          </div>
+        </div>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleContent(this)">
+        Show more ▼
+      </button>
+    </section>
+
+    <!-- ===== MOHICAN ===== -->
+    <section class="hairstyle" id="mohican">
+      <h2>🔥 Mohican Style (Sporty & Confident)</h2>
+
+      <img src="../img/mohican.jpeg" alt="Modern Mohican haircut" />
+
+      <p>
+        The <b>Mohican</b> is all about power and energy. With short sides and a
+        raised center, it brings out strong and sporty masculinity.
+      </p>
+
+      <div class="more-content">
+        <div class="more-inner">
+          <div class="highlight">
+            ✨ <b>Special point:</b> Perfect for active men who want to show
+            confidence and individuality.
+          </div>
+
+          <h3>🔥 Key Advantages</h3>
+          <ul>
+            <li>Gives a <b>bold, athletic</b> appearance.</li>
+            <li>Suitable for <b>all ages</b> — students to professionals.</li>
+            <li>Easy to maintain with daily wax or gel.</li>
+            <li>Best for sporty, short-hair lovers.</li>
+          </ul>
+
+          <img src="../img/mohican-side.jpg" alt="Mohican side view" />
+
+          <h3>📌 Popular Variations</h3>
+          <ul>
+            <li>
+              <b>Mohican Fade:</b> Low fade sides for a clean, trendy look.
+            </li>
+            <li><b>Mohican Layer:</b> Adds softness and texture.</li>
+            <li>
+              <b>Mohican Textured:</b> Extra volume and motion for thick hair.
+            </li>
+          </ul>
+
+          <img src="../img/mohican-variants.jpg" alt="Mohican variations" />
+
+          <h3>💡 Styling & Care Tips</h3>
+          <p>
+            Blow-dry upward, apply strong-hold wax or gel, and finish with hair
+            spray for all-day form.
+          </p>
+
+          <div class="highlight">
+            👉 Tip: Blow-dry opposite to hair growth before styling for more
+            lift.
+          </div>
+
+          <h3>📸 Mohican Gallery</h3>
+          <div class="gallery">
+            <img src="../img/mohican1.jpg" alt="Mohican 1" />
+            <img src="../img/mohican2.jpg" alt="Mohican 2" />
+            <img src="../img/mohican3.jpg" alt="Mohican 3" />
+            <img src="../img/mohican4.jpg" alt="Mohican 4" />
+          </div>
+        </div>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleContent(this)">
+        Show more ▼
+      </button>
+    </section>
+
+    <!-- ===== QUIFF ===== -->
+    <section class="hairstyle" id="quiff">
+      <h2>💨 Quiff Style (Voluminous & Stylish)</h2>
+
+      <img src="../img/quiff-main.jpg" alt="Natural Quiff hairstyle" />
+
+      <p>
+        The <b>Quiff</b> is a European-inspired style with a voluminous top and
+        clean sides — a perfect mix of elegance and freedom.
+      </p>
+
+      <div class="more-content">
+        <div class="more-inner">
+          <div class="highlight">
+            ✨ <b>Special point:</b> Ideal for men with round faces or low
+            foreheads.
+          </div>
+
+          <h3>🔥 Key Advantages</h3>
+          <ul>
+            <li>Makes the face look <b>taller and sharper</b>.</li>
+            <li>Flexible: high, natural, or messy variations.</li>
+            <li>Suitable for formal and casual occasions.</li>
+            <li>Gives a <b>mature, confident</b> image.</li>
+          </ul>
+
+          <img src="../img/quiff-side.jpg" alt="Quiff side view" />
+
+          <h3>📌 Popular Variations</h3>
+          <ul>
+            <li><b>Classic Quiff:</b> Neatly lifted, moderate height.</li>
+            <li><b>Textured Quiff:</b> Soft and airy, natural finish.</li>
+            <li><b>Messy Quiff:</b> Relaxed, youthful, and stylish.</li>
+          </ul>
+
+          <img src="../img/quiff-variants.jpg" alt="Quiff variations" />
+
+          <h3>💡 Styling & Care Tips</h3>
+          <p>
+            Blow-dry upward with a round brush for height, apply wax from roots
+            to tips, and finish with light spray.
+          </p>
+
+          <div class="highlight">
+            👉 Tip: Thin out thick hair at the crown for a cleaner Quiff shape.
+          </div>
+
+          <h3>📸 Quiff Gallery</h3>
+          <div class="gallery">
+            <img src="../img/quiff1.jpg" alt="Quiff 1" />
+            <img src="../img/quiff2.jpg" alt="Quiff 2" />
+            <img src="../img/quiff3.jpg" alt="Quiff 3" />
+            <img src="../img/quiff4.jpg" alt="Quiff 4" />
+          </div>
+        </div>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleContent(this)">
+        Show more ▼
+      </button>
+    </section>
+
+    <!-- ===== POMPADOUR ===== -->
+    <section class="hairstyle" id="pompadour">
+      <h2>🎩 Pompadour Style (Classy Gentleman)</h2>
+
+      <img
+        src="../img/pompadour-main.jpg"
+        alt="Gentleman Pompadour hairstyle"
+      />
+
+      <p>
+        The <b>Pompadour</b> is a classic, elegant style with a lifted, backward
+        fringe — ideal for those who want to show confidence and sophistication.
+      </p>
+
+      <div class="more-content">
+        <div class="more-inner">
+          <div class="highlight">
+            ✨ <b>Special point:</b> Adds height and volume to the forehead,
+            creating balance and attraction.
+          </div>
+
+          <h3>🔥 Key Advantages</h3>
+          <ul>
+            <li><b>Mature and sophisticated</b> appearance.</li>
+            <li>Makes the face look <b>longer and slimmer</b>.</li>
+            <li>Represents <b>confidence and class</b>.</li>
+            <li>Perfect for events or formal occasions.</li>
+          </ul>
+
+          <img src="../img/pompadour-side.jpg" alt="Pompadour side view" />
+
+          <h3>📌 Popular Variations</h3>
+          <ul>
+            <li><b>Classic Pompadour:</b> High and vintage-inspired.</li>
+            <li><b>Modern Pompadour:</b> Light fade and trendy design.</li>
+            <li><b>Short Pompadour:</b> Neat and easy to maintain.</li>
+          </ul>
+
+          <img src="../img/pompadour-variants.jpg" alt="Pompadour variations" />
+
+          <h3>💡 Styling & Care Tips</h3>
+          <p>
+            Blow-dry upward, apply water-based pomade for shine and control, and
+            use light hairspray for long hold.
+          </p>
+
+          <div class="highlight">
+            👉 Tip: Water-based pomade offers shine and easy restyling during
+            the day.
+          </div>
+
+          <h3>📸 Pompadour Gallery</h3>
+          <div class="gallery">
+            <img src="../img/pompadour1.jpg" alt="Pompadour 1" />
+            <img src="../img/pompadour2.jpg" alt="Pompadour 2" />
+            <img src="../img/pompadour3.jpg" alt="Pompadour 3" />
+            <img src="../img/pompadour4.jpg" alt="Pompadour 4" />
+          </div>
+        </div>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleContent(this)">
+        Show more ▼
+      </button>
+    </section>
+
+    <footer>
+      <div class="footer-bottom">© 2025 Thai Barber | Nam Dinh - Vietnam</div>
+    </footer>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <span class="prev">&#10094;</span>
+      <img class="lightbox-content" id="lightbox-img" alt="" />
+      <span class="next">&#10095;</span>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+      function toggleMenu() {
+        document.getElementById("nav-menu").classList.toggle("show");
+      }
+
+      // === Lightbox effect ===
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const closeBtn = document.querySelector(".lightbox .close");
+      const prevBtn = document.querySelector(".lightbox .prev");
+      const nextBtn = document.querySelector(".lightbox .next");
+      const galleryImages = document.querySelectorAll(
+        ".gallery img, .hairstyle img"
+      );
+
+      let currentIndex = 0;
+
+      function showImage(index) {
+        if (index < 0) index = galleryImages.length - 1;
+        if (index >= galleryImages.length) index = 0;
+        currentIndex = index;
+        lightboxImg.style.opacity = 0;
+        setTimeout(() => {
+          lightboxImg.src = galleryImages[index].src;
+          lightboxImg.style.opacity = 1;
+        }, 150);
+      }
+
+      galleryImages.forEach((img, index) => {
+        img.addEventListener("click", () => {
+          lightbox.style.display = "flex";
+          showImage(index);
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+      });
+
+      nextBtn.addEventListener("click", () => showImage(currentIndex + 1));
+      prevBtn.addEventListener("click", () => showImage(currentIndex - 1));
+
+      // Swipe and keyboard navigation
+      let startX = 0;
+      lightbox.addEventListener(
+        "touchstart",
+        (e) => (startX = e.touches[0].clientX)
+      );
+      lightbox.addEventListener("touchend", (e) => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) showImage(currentIndex + 1);
+        if (endX - startX > 50) showImage(currentIndex - 1);
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (lightbox.style.display === "flex") {
+          if (e.key === "ArrowRight") showImage(currentIndex + 1);
+          if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+          if (e.key === "Escape") lightbox.style.display = "none";
+        }
+      });
+    </script>
+
+    <script>
+      function toggleContent(btn) {
+        const allSections = document.querySelectorAll(".hairstyle");
+        const section = btn.closest(".hairstyle");
+        const content = section.querySelector(".more-content");
+
+        allSections.forEach((sec) => {
+          const otherContent = sec.querySelector(".more-content");
+          const otherBtn = sec.querySelector(".toggle-btn");
+          if (otherContent !== content) {
+            otherContent.classList.remove("show");
+            if (otherBtn) otherBtn.textContent = "Show more ▼";
+          }
+        });
+
+        if (content.classList.contains("show")) {
+          content.classList.remove("show");
+          btn.textContent = "Show more ▼";
+        } else {
+          content.classList.add("show");
+          btn.textContent = "Hide ▲";
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    </script>
+    <script>
+      document.getElementById("to-en").addEventListener("click", function (e) {
+        e.preventDefault();
+        const path = window.location.pathname;
+        if (path.includes("bangtin.html")) {
+          window.location.href = "../en/news.html";
+        } else if (path.includes("tocdep.html")) {
+          window.location.href = "../en/styles.html";
+        } else {
+          window.location.href = "../en/index.html";
+        }
+      });
+
+      document.getElementById("to-vi").addEventListener("click", function (e) {
+        e.preventDefault();
+        const path = window.location.pathname;
+        if (path.includes("news.html")) {
+          window.location.href = "../bangtin.html";
+        } else if (path.includes("styles.html")) {
+          window.location.href = "../tocdep.html";
+        } else {
+          window.location.href = "../index.html";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>News Board - Thai Barber Nam Dinh</title>
+    <meta
+      name="description"
+      content="Stay updated with the latest news, hairstyles, and promotions from Thai Barber — a modern men's barbershop in Nam Dinh."
+    />
+    <meta name="author" content="Thai Barber Nam Dinh" />
+    <meta
+      name="keywords"
+      content="Thai Barber news, men's haircut Nam Dinh, barber promotions"
+    />
+
+    <meta property="og:title" content="News Board - Thai Barber Nam Dinh" />
+    <meta
+      property="og:description"
+      content="Check out the latest promotions, hairstyle trends, and activities from Thai Barber in Nam Dinh."
+    />
+    <meta
+      property="og:image"
+      content="https://www.thaibarber.net/img/bangtin.jpg"
+    />
+    <meta property="og:url" content="https://www.thaibarber.net/en/news.html" />
+    <meta property="og:type" content="article" />
+
+    <link
+      rel="alternate"
+      hreflang="vi"
+      href="https://www.thaibarber.net/bangtin.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.thaibarber.net/en/news.html"
+    />
+    <link rel="canonical" href="https://www.thaibarber.net/en/news.html" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      /* ===== RESET + BASE ===== */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f0f2f5;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* ===== NAVBAR ===== */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      /* Logo + Brand */
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+      .nav-left:hover {
+        transform: scale(1.1);
+      }
+      .nav-logo {
+        height: 40px;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .brand {
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #1877f2;
+      }
+      .nav-left:hover .brand {
+        color: #145dbf;
+      }
+
+      /* link kiểu tóc */
+      .style-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+      .style-link:hover {
+        transform: scale(1.03);
+      }
+
+      /* Menu phải */
+      .nav-right {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        transition: all 0.3s ease;
+      }
+      .nav-right li a {
+        display: inline-block;
+        padding: 6px 12px;
+        line-height: 1.5;
+        text-decoration: none;
+        color: #333;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+      }
+      .nav-right li a:hover {
+        background: #f0f2f5;
+        color: #1877f2;
+        transform: scale(1.1);
+      }
+
+      /* Link Trang chủ nổi bật */
+      .nav-right li a[href="index.html"] {
+        background: #1877f2;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.1em;
+        text-transform: uppercase;
+      }
+      .nav-right li a[href="index.html"]:hover {
+        background: #145dbf;
+        color: #fff;
+      }
+
+      /* ===== HAMBURGER MENU (Mobile) ===== */
+      .hamburger {
+        display: none;
+        font-size: 1.8em;
+        color: #1877f2;
+        cursor: pointer;
+      }
+
+      /* Khi dưới 768px thì mới hiện nút ☰ */
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+        }
+
+        /* Menu xổ sang phải */
+        .nav-right {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px; /* ngay dưới navbar */
+          right: 15px; /* sát mép phải */
+          width: 180px;
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          overflow: hidden;
+          z-index: 999;
+        }
+
+        .nav-right.show {
+          display: flex;
+          animation: slideIn 0.2s ease-out;
+        }
+
+        .nav-right li {
+          border-bottom: 1px solid #eee;
+        }
+
+        .nav-right li:last-child {
+          border-bottom: none;
+        }
+
+        .nav-right a {
+          display: block;
+          padding: 12px 15px;
+          color: #1877f2;
+          text-decoration: none;
+          font-weight: 600;
+          text-align: left; /* canh trái trong khung */
+        }
+
+        .nav-right a:hover {
+          background: #f0f2f5;
+        }
+
+        /* Hiệu ứng trượt nhẹ khi hiện menu */
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateY(-5px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+
+      /* ===== CẤU TRÚC CHUNG ===== */
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 15px 60px;
+      }
+
+      h2 {
+        text-align: center;
+        color: #1877f2;
+        font-size: 1.6rem;
+        margin: 25px 0;
+      }
+
+      /* ===== BÀI BẢNG TIN ===== */
+      section.news {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* ẢNH */
+      .news {
+        overflow: hidden; /* ✅ chặn ảnh tràn ra ngoài bo góc */
+      }
+      .news-img {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 15px;
+        text-align: center;
+      }
+      .news-img img {
+        max-width: 100%; /* ✅ giới hạn trong khung container */
+        height: auto; /* ✅ giữ đúng tỉ lệ ảnh */
+        border-radius: 10px;
+        display: block; /* ✅ ảnh hiển thị block để margin auto có tác dụng */
+        margin: 0 auto;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* 🌟 bóng nhẹ cho đẹp */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .news-img img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      }
+
+      /* ===== VIDEO ===== */
+      .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        padding-bottom: 56.25%; /* ✅ 16:9 mặc định trên máy tính */
+        height: 0;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        margin: 0 auto 15px;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      /* Khi xem trên điện thoại dọc (<=768px), đổi tỉ lệ sang 9:16 */
+      @media (max-width: 768px) {
+        .video-container {
+          padding-bottom: 177%; /* ✅ đổi thành 9:16 khi màn hình nhỏ */
+        }
+      }
+
+      .video-caption {
+        text-align: center;
+        font-size: 0.95rem;
+        color: #555;
+        margin: 5px 0 10px;
+      }
+
+      /* TIÊU ĐỀ + NỘI DUNG */
+      .news-text h3 {
+        color: #1877f2;
+        margin: 8px 0 10px;
+        font-size: 1.2rem;
+      }
+      .news-meta {
+        font-size: 0.9rem;
+        color: #777;
+        margin-bottom: 10px;
+      }
+      .news-text p {
+        margin-bottom: 10px;
+      }
+      .news-points {
+        margin: 8px 0 12px 18px;
+      }
+
+      /* NÚT XEM TRÊN YOUTUBE */
+      .watch-on-yt {
+        display: block;
+        width: fit-content;
+        margin: 10px auto 0;
+        padding: 8px 14px;
+        border: 1px solid #1877f2;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #1877f2;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .watch-on-yt:hover {
+        background: #1877f2;
+        color: #fff;
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        text-align: center;
+        background: #fff;
+        padding: 15px 0;
+        color: #555;
+        font-size: 0.9rem;
+        border-top: 1px solid #ddd;
+      }
+
+      /* ===== MOBILE ===== */
+      @media (max-width: 768px) {
+        .container {
+          padding: 15px;
+        }
+        h2 {
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="nav-left">
+          <img src="../img/logo.jpg" alt="Logo" class="nav-logo" />
+          <span class="brand">Thai Barber - 627 Giai Phong</span>
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-right" id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="news.html" class="active">News</a></li>
+          <li><a href="styles.html">Styles</a></li>
+          <li>
+            <a id="to-vi" href="#">VI</a> |
+            <a id="to-en" class="active-lang" href="#">EN</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== CONTENT ===== -->
+    <main class="container">
+      <h2>📢 Thai Barber News Board</h2>
+
+      <!-- POST 1 -->
+      <section class="news" id="messy-fringe-curly">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/Gd0frezhDb0"
+            title="Messy fringe curly style for handsome guys - Thai Barber"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="news-text">
+          <h3>Messy Fringe Curly Style 💈</h3>
+          <p class="news-meta">
+            Posted: 2025-10-10 · Category: Perm, Messy Fringe
+          </p>
+          <p>
+            The <strong>Messy Fringe Curly</strong> features naturally wavy
+            bangs with light volume — great for round or oval faces. Easy to
+            dry, easy to style, and perfect for a youthful yet stylish look.
+          </p>
+          <ul class="news-points">
+            <li>Perm level: small–medium rods for gentle volume on bangs.</li>
+            <li>Styling tip: blow-dry upward + use matte wax.</li>
+            <li>Best for: medium-thick, soft to normal hair.</li>
+          </ul>
+          <p>
+            👉 Watch the detailed demo video below. Want to try it now? Visit
+            <a href="https://maps.app.goo.gl/8g2Z5j3uH9QT96Zt6" target="_blank"
+              >Thai Barber - 627 Giai Phong, Truong Thi Ward, Ninh Binh</a
+            >!
+          </p>
+          <a
+            class="watch-on-yt"
+            href="https://www.youtube.com/watch?v=Gd0frezhDb0"
+            target="_blank"
+            rel="noopener"
+            >Watch on YouTube</a
+          >
+        </div>
+      </section>
+
+      <!-- POST 2 -->
+      <section class="news" id="premlock">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/hEXC7rzTI0E"
+            title="Premlock perm for round faces - Thai Barber"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="news-text">
+          <h3>Premlock Perm for Round Faces 💈</h3>
+          <p class="news-meta">Posted: 2025-10-16 · Category: Perm, Premlock</p>
+          <p>
+            The <strong>Premlock</strong> style creates a natural lift at the
+            hair roots with clear texture, making the face appear slimmer and
+            more balanced. Perfect for those with round or square face shapes.
+          </p>
+          <ul class="news-points">
+            <li>Perm level: medium–strong, focused at the roots.</li>
+            <li>Styling: light blow-dry with glossy wax or pomade.</li>
+            <li>Best for: thick, coarse hair and round faces.</li>
+          </ul>
+          <p>
+            👉 Watch the detailed demo video below. Want to try it now? Visit
+            <a href="https://maps.app.goo.gl/8g2Z5j3uH9QT96Zt6" target="_blank"
+              >Thai Barber - 627 Giai Phong, Truong Thi Ward, Ninh Binh</a
+            >!
+          </p>
+          <a
+            class="watch-on-yt"
+            href="https://www.youtube.com/shorts/hEXC7rzTI0E"
+            target="_blank"
+            rel="noopener"
+            >Watch on YouTube</a
+          >
+        </div>
+      </section>
+
+      <!-- POST 3 -->
+      <section class="news" id="perm-hair">
+        <div class="news-img">
+          <img src="../img/uontoc.jpg" alt="Perm service at Thai Barber" />
+        </div>
+        <div class="news-text">
+          <h3>Today's Customer Got a Fresh Perm 💈</h3>
+          <p>
+            Sitting on the chair playing games 🎮 while the barber carefully
+            rolls each curler — he looks serious, but maybe he’s thinking, “Will
+            I look like a K-pop idol after this? 🤔”
+          </p>
+          <p>
+            Gentlemen, if you want to refresh your style, drop by and give it a
+            try 💈.
+          </p>
+          <p>
+            👉 Want to see more? Visit
+            <a href="https://maps.app.goo.gl/8g2Z5j3uH9QT96Zt6" target="_blank"
+              >Thai Barber - 627 Giai Phong, Truong Thi Ward, Ninh Binh</a
+            >!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <p>© 2025 Thai Barber - Nam Dinh. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("nav-menu").classList.toggle("show");
+      }
+    </script>
+    <script>
+      document.getElementById("to-en").addEventListener("click", function (e) {
+        e.preventDefault();
+        const path = window.location.pathname;
+        if (path.includes("bangtin.html")) {
+          window.location.href = "../en/news.html";
+        } else if (path.includes("tocdep.html")) {
+          window.location.href = "../en/styles.html";
+        } else {
+          window.location.href = "../en/index.html";
+        }
+      });
+
+      document.getElementById("to-vi").addEventListener("click", function (e) {
+        e.preventDefault();
+        const path = window.location.pathname;
+        if (path.includes("news.html")) {
+          window.location.href = "../bangtin.html";
+        } else if (path.includes("styles.html")) {
+          window.location.href = "../tocdep.html";
+        } else {
+          window.location.href = "../index.html";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -78,6 +78,10 @@
         <li><a href="bangtin.html">Bảng Tin</a></li>
         <li><a href="tocdep.html">Tóc Đẹp</a></li>
       </ul>
+      <li>
+        <a id="to-vi" class="active-lang" href="#">VI</a> |
+        <a id="to-en" href="#">EN</a>
+      </li>
     </nav>
 
     <!-- ===== COVER ===== -->
@@ -614,6 +618,36 @@
           arrow.textContent = "▼";
         }
       }
+    </script>
+    <script>
+      document.getElementById("to-en").addEventListener("click", function (e) {
+        e.preventDefault();
+
+        // Kiểm tra trang hiện tại để chuyển đúng link tương ứng
+        const path = window.location.pathname;
+
+        if (path.includes("bangtin.html")) {
+          window.location.href = "en/news.html";
+        } else if (path.includes("tocdep.html")) {
+          window.location.href = "en/styles.html";
+        } else {
+          window.location.href = "en/index.html";
+        }
+      });
+
+      document.getElementById("to-vi").addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const path = window.location.pathname;
+
+        if (path.includes("news.html")) {
+          window.location.href = "bangtin.html";
+        } else if (path.includes("styles.html")) {
+          window.location.href = "tocdep.html";
+        } else {
+          window.location.href = "index.html";
+        }
+      });
     </script>
   </body>
 </html>
