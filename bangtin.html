@@ -31,6 +31,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <!-- en -->
+    <link
+      rel="alternate"
+      hreflang="vi"
+      href="https://www.thaibarber.net/bangtin.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.thaibarber.net/en/news.html"
+    />
+    <link rel="canonical" href="https://www.thaibarber.net/bangtin.html" />
 
     <style>
       /* ===== RESET + BASE ===== */
@@ -134,34 +146,72 @@
         color: #fff;
       }
 
-      /* ===== HAMBURGER MENU ===== */
+      /* ===== HAMBURGER MENU (Mobile) ===== */
       .hamburger {
         display: none;
         font-size: 1.8em;
-        cursor: pointer;
         color: #1877f2;
+        cursor: pointer;
       }
-      .nav-right.show {
-        display: flex !important;
-        flex-direction: column;
-        background: #fff;
-        position: absolute;
-        top: 60px;
-        right: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-        width: 200px;
-        text-align: right;
-        padding: 10px 0;
-        z-index: 999;
-      }
-      .nav-right.show li {
-        margin: 0;
-        border-bottom: 1px solid #eee;
-      }
-      .nav-right.show a {
-        display: block;
-        padding: 10px 15px;
+
+      /* Khi dưới 768px thì mới hiện nút ☰ */
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+        }
+
+        /* Menu xổ sang phải */
+        .nav-right {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px; /* ngay dưới navbar */
+          right: 15px; /* sát mép phải */
+          width: 180px;
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          overflow: hidden;
+          z-index: 999;
+        }
+
+        .nav-right.show {
+          display: flex;
+          animation: slideIn 0.2s ease-out;
+        }
+
+        .nav-right li {
+          border-bottom: 1px solid #eee;
+        }
+
+        .nav-right li:last-child {
+          border-bottom: none;
+        }
+
+        .nav-right a {
+          display: block;
+          padding: 12px 15px;
+          color: #1877f2;
+          text-decoration: none;
+          font-weight: 600;
+          text-align: left; /* canh trái trong khung */
+        }
+
+        .nav-right a:hover {
+          background: #f0f2f5;
+        }
+
+        /* Hiệu ứng trượt nhẹ khi hiện menu */
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateY(-5px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
       }
 
       /* ===== CẤU TRÚC CHUNG ===== */
@@ -329,8 +379,8 @@
     <!-- ===== NỘI DUNG ===== -->
     <main class="container">
       <h2>📢 Bảng Tin Thái Barber</h2>
-      <!-- BÀI -->
-      <section class="news">
+      <!-- BÀI 1 -->
+      <section class="news" id="messy-fringe-curly">
         <div class="video-container">
           <iframe
             src="https://www.youtube.com/embed/Gd0frezhDb0"
@@ -371,8 +421,52 @@
           >
         </div>
       </section>
-      <!-- BÀI -->
-      <section class="news">
+      <!-- BÀI 2 -->
+      <section class="news" id="premlock">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/hEXC7rzTI0E"
+            title="Uốn Premlock dành cho anh em mặt to - Thái Barber"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="news-text">
+          <h3>Uốn Premlock dành cho anh em mặt to 💈</h3>
+          <p class="news-meta">
+            Đăng: 2025-10-16 · Chuyên mục: Uốn tóc, Premlock
+          </p>
+          <p>
+            Kiểu <strong>Premlock</strong> giúp tạo độ phồng tự nhiên ở phần
+            chân tóc, kết hợp với texture rõ nét để khuôn mặt trông thon gọn
+            hơn. Dành cho anh em có khuôn mặt to hoặc góc cạnh muốn tạo độ cân
+            đối.
+          </p>
+          <ul class="news-points">
+            <li>Độ uốn: trung bình – mạnh, tập trung ở chân tóc.</li>
+            <li>Styling: sấy nhẹ kết hợp sáp bóng nhẹ hoặc pomade.</li>
+            <li>Phù hợp: tóc dày, sợi cứng, khuôn mặt to/tròn.</li>
+          </ul>
+          <p>
+            👉 Xem video demo chi tiết bên dưới. Muốn thử ngay? Hãy tới ngay
+            <a href="https://maps.app.goo.gl/8g2Z5j3uH9QT96Zt6" target="_blank"
+              >Thái Barber - 627 Giải Phóng, P. Trường Thi, Ninh Bình</a
+            >
+            nhé!
+          </p>
+          <a
+            class="watch-on-yt"
+            href="https://www.youtube.com/shorts/hEXC7rzTI0E"
+            target="_blank"
+            rel="noopener"
+            >Xem trên YouTube</a
+          >
+        </div>
+      </section>
+
+      <!-- BÀICUối-->
+      <section class="news" id="uon-toc">
         <div class="news-img">
           <img src="img/uontoc.jpg" alt="Uốn tóc tại Thái Barber" />
         </div>
@@ -385,6 +479,13 @@
           </p>
           <p>Anh em nào muốn thử đổi gió thì qua tiệm test luôn nhé 💈.</p>
         </div>
+        <p>
+          👉 Xem video demo chi tiết bên dưới. Muốn thử ngay? Hãy tới ngay
+          <a href="https://maps.app.goo.gl/8g2Z5j3uH9QT96Zt6" target="_blank"
+            >Thái Barber - 627 Giải Phóng, P. Trường Thi, Ninh Bình</a
+          >
+          nhé!
+        </p>
       </section>
     </main>
 

@@ -46,6 +46,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <!-- en -->
+    <link
+      rel="alternate"
+      hreflang="vi"
+      href="https://www.thaibarber.net/bangtin.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.thaibarber.net/en/news.html"
+    />
+    <link rel="canonical" href="https://www.thaibarber.net/bangtin.html" />
   </head>
 
   <body>
@@ -434,6 +446,26 @@
           >
           </iframe>
         </section>
+        <section class="home-news">
+          <h2>📰 Bảng Tin Mới Nhất</h2>
+          <ul class="news-list">
+            <li>
+              <a href="bangtin.html#premlock" target="_blank"
+                >Uốn Premlock dành cho anh em mặt to 💈</a
+              >
+            </li>
+            <li>
+              <a href="bangtin.html#messy-fringe-curly" target="_blank"
+                >Uốn messy fringe curly cho zai đẹp 💈</a
+              >
+            </li>
+            <li>
+              <a href="bangtin.html#uon-toc"
+                >Hôm nay tiệm có ông em ra làm quả uốn tóc 💈</a
+              >
+            </li>
+          </ul>
+        </section>
       </aside>
     </div>
 
@@ -475,6 +507,16 @@
       function toggleMenu() {
         document.getElementById("nav-menu").classList.toggle("show");
       }
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        if (window.location.hash) {
+          const target = document.querySelector(window.location.hash);
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      });
     </script>
     <script type="application/ld+json">
       {
