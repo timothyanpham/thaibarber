@@ -107,7 +107,66 @@
       .style-link:hover {
         transform: scale(1.03);
       }
+      /* ===== LANGUAGE SWITCH WITH FLAGS ===== */
+      .lang-switch {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-weight: 600;
+        margin-left: 10px;
+      }
 
+      .lang-switch span {
+        color: #bbb;
+        font-weight: normal;
+      }
+
+      .lang-switch a {
+        color: #1877f2;
+        text-decoration: none;
+        border: 1px solid #1877f2;
+        padding: 4px 10px;
+        border-radius: 8px;
+        transition: all 0.25s ease;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.95rem;
+      }
+
+      .flag-icon {
+        width: 18px;
+        height: 18px;
+        border-radius: 3px;
+        object-fit: cover;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+      }
+
+      .lang-switch a:hover {
+        background: #1877f2;
+        color: #fff;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 5px rgba(24, 119, 242, 0.25);
+      }
+
+      .lang-switch .active-lang {
+        background: #1877f2;
+        color: #fff !important;
+        cursor: default;
+        box-shadow: 0 2px 5px rgba(24, 119, 242, 0.25);
+      }
+
+      @media (max-width: 768px) {
+        .lang-switch a {
+          padding: 4px 8px;
+          font-size: 0.9rem;
+        }
+        .flag-icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
       /* Menu phải */
       .nav-right {
         list-style: none;
@@ -372,9 +431,24 @@
           <li><a href="index.html">Trang chủ</a></li>
           <li><a href="bangtin.html" class="active">Bảng Tin</a></li>
           <li><a href="tocdep.html">Tóc Đẹp</a></li>
-          <li>
-            <a id="to-vi" class="active-lang" href="#">VI</a> |
-            <a id="to-en" href="#">EN</a>
+          <li class="lang-switch">
+            <a id="to-vi" class="active-lang" href="#">
+              <img
+                src="https://flagcdn.com/w20/vn.png"
+                alt="VN flag"
+                class="flag-icon"
+              />
+              VI
+            </a>
+            <span>|</span>
+            <a id="to-en" href="#">
+              <img
+                src="https://flagcdn.com/w20/us.png"
+                alt="US flag"
+                class="flag-icon"
+              />
+              EN
+            </a>
           </li>
         </ul>
       </nav>
