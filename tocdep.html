@@ -377,26 +377,26 @@
         <li><a href="index.html">Trang chủ</a></li>
         <li><a href="bangtin.html">Bảng Tin</a></li>
         <li><a href="tocdep.html">Tóc Đẹp</a></li>
+        <li class="lang-switch">
+          <a id="to-vi" class="active-lang" href="#">
+            <img
+              src="https://flagcdn.com/w20/vn.png"
+              alt="VN flag"
+              class="flag-icon"
+            />
+            VI
+          </a>
+          <span>|</span>
+          <a id="to-en" href="#">
+            <img
+              src="https://flagcdn.com/w20/us.png"
+              alt="US flag"
+              class="flag-icon"
+            />
+            EN
+          </a>
+        </li>
       </ul>
-      <li class="lang-switch">
-        <a id="to-vi" class="active-lang" href="#">
-          <img
-            src="https://flagcdn.com/w20/vn.png"
-            alt="VN flag"
-            class="flag-icon"
-          />
-          VI
-        </a>
-        <span>|</span>
-        <a id="to-en" href="#">
-          <img
-            src="https://flagcdn.com/w20/us.png"
-            alt="US flag"
-            class="flag-icon"
-          />
-          EN
-        </a>
-      </li>
     </nav>
 
     <!-- ===== GIỚI THIỆU ===== -->
@@ -1017,6 +1017,33 @@
           lightbox.classList.remove("hide");
           document.body.style.overflow = "auto";
         }, 300);
+      });
+    </script>
+    <script>
+      // Chuyển sang tiếng Anh
+      document.getElementById("to-en").addEventListener("click", function (e) {
+        e.preventDefault();
+        const path = window.location.pathname;
+        if (path.includes("bangtin.html")) {
+          window.location.href = "en/news.html";
+        } else if (path.includes("tocdep.html")) {
+          window.location.href = "en/styles.html";
+        } else {
+          window.location.href = "en/index.html";
+        }
+      });
+
+      // Chuyển sang tiếng Việt
+      document.getElementById("to-vi").addEventListener("click", function (e) {
+        e.preventDefault();
+        const path = window.location.pathname;
+        if (path.includes("news.html")) {
+          window.location.href = "bangtin.html";
+        } else if (path.includes("styles.html")) {
+          window.location.href = "tocdep.html";
+        } else {
+          window.location.href = "index.html";
+        }
       });
     </script>
   </body>
