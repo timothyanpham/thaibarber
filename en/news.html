@@ -43,6 +43,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="../style.css" />
 
     <style>
       /* ===== RESET + BASE ===== */
@@ -275,6 +276,7 @@
 
       /* ===== CẤU TRÚC CHUNG ===== */
       .container {
+        display: block !important;
         max-width: 800px;
         margin: 0 auto;
         padding: 20px 15px 60px;
@@ -417,41 +419,40 @@
   </head>
   <body>
     <!-- ===== NAVBAR ===== -->
-    <header>
-      <nav class="navbar">
-        <a href="index.html" class="nav-left">
-          <img src="../img/logo.jpg" alt="Logo" class="nav-logo" />
-          <span class="brand">Thai Barber - 627 Giai Phong</span>
-        </a>
-        <div class="hamburger" onclick="toggleMenu()">
-          <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-right" id="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="news.html" class="active">News</a></li>
-          <li><a href="styles.html">Styles</a></li>
-          <li class="lang-switch">
-            <a id="to-vi" href="#">
-              <img
-                src="https://flagcdn.com/w20/vn.png"
-                alt="VN flag"
-                class="flag-icon"
-              />
-              VI
-            </a>
-            <span>|</span>
-            <a id="to-en" class="active-lang" href="#">
-              <img
-                src="https://flagcdn.com/w20/us.png"
-                alt="US flag"
-                class="flag-icon"
-              />
-              EN
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+
+    <nav class="navbar">
+      <a href="index.html" class="nav-left">
+        <img src="../img/logo.jpg" alt="Logo" class="nav-logo" />
+        <span class="brand">Thai Barber - 627 Giai Phong</span>
+      </a>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-right" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html" class="active">News</a></li>
+        <li><a href="styles.html">Styles</a></li>
+        <li class="lang-switch">
+          <a id="to-vi" href="#">
+            <img
+              src="https://flagcdn.com/w20/vn.png"
+              alt="VN flag"
+              class="flag-icon"
+            />
+            VI
+          </a>
+          <span>|</span>
+          <a id="to-en" class="active-lang" href="#">
+            <img
+              src="https://flagcdn.com/w20/us.png"
+              alt="US flag"
+              class="flag-icon"
+            />
+            EN
+          </a>
+        </li>
+      </ul>
+    </nav>
 
     <!-- ===== CONTENT ===== -->
     <main class="container">
@@ -539,7 +540,98 @@
         </div>
       </section>
 
-      <!-- POST 3 -->
+      <!-- ARTICLE 3 -->
+      <section class="news" id="ruffled">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/FemQFBwyHTI"
+            title="Ruffled Perm for Fine Hair - Thai Barber"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="news-text">
+          <h3>Ruffled Perm for Fine Hair 💈</h3>
+          <p class="news-meta">Posted: 2025-10-23 · Category: Perm, Ruffled</p>
+          <p>
+            The <strong>Ruffled</strong> style is specially designed for fine or
+            thin hair — it adds volume and a natural lift without needing too
+            much styling wax. Perfect for men who prefer a soft, natural texture
+            that still holds shape.
+          </p>
+          <ul class="news-points">
+            <li>
+              Perm strength: light – natural, focused on adding volume at the
+              crown.
+            </li>
+            <li>
+              Styling: blow dry against hair direction with dry wax or
+              pre-styling spray.
+            </li>
+            <li>Best for: fine, thin, or easily flattened hair.</li>
+          </ul>
+          <p>
+            👉 Watch the detailed demo below. Want to try it out? Visit
+            <a href="https://maps.app.goo.gl/8g2Z5j3uH9QT96Zt6" target="_blank"
+              >Thai Barber - 627 Giai Phong St., Truong Thi Ward, Ninh Binh</a
+            >
+            now!
+          </p>
+          <a
+            class="watch-on-yt"
+            href="https://www.youtube.com/shorts/FemQFBwyHTI"
+            target="_blank"
+            rel="noopener"
+            >Watch on YouTube</a
+          >
+        </div>
+      </section>
+      <!-- ARTICLE 4 -->
+      <section class="news" id="ruffled-kids">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/h3q2cK858_I"
+            title="Ruffled Perm for Kids - Thai Barber"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="news-text">
+          <h3>Ruffled Perm for Kids 💈</h3>
+          <p class="news-meta">
+            Posted: 2025-10-23 · Category: Perm, Ruffled, Kids
+          </p>
+          <p>
+            The <strong>Ruffled Kids</strong> version is a softer, lighter take
+            on the regular Ruffled style — giving children’s hair a gentle wave
+            that’s easy to comb and naturally stylish. Ideal for kids with fine,
+            flat hair who want a fresh, easy-to-manage look.
+          </p>
+          <ul class="news-points">
+            <li>Perm strength: soft, natural-looking form.</li>
+            <li>Styling: simply blow dry; no wax needed.</li>
+            <li>Best for: children with fine or hard-to-style hair.</li>
+          </ul>
+          <p>
+            👉 Watch the detailed demo below. Want your kid to try it? Visit
+            <a href="https://maps.app.goo.gl/8g2Z5j3uH9QT96Zt6" target="_blank"
+              >Thai Barber - 627 Giai Phong St., Truong Thi Ward, Ninh Binh</a
+            >
+            today!
+          </p>
+          <a
+            class="watch-on-yt"
+            href="https://www.youtube.com/shorts/h3q2cK858_I"
+            target="_blank"
+            rel="noopener"
+            >Watch on YouTube</a
+          >
+        </div>
+      </section>
+
+      <!-- POST cuoi -->
       <section class="news" id="perm-hair">
         <div class="news-img">
           <img src="../img/uontoc.jpg" alt="Perm service at Thai Barber" />

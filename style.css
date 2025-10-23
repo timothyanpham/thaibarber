@@ -246,6 +246,23 @@ body {
   color: #1877f2;
   transform: scale(1.1);
 }
+/* Khi đang ở trang hiện tại */
+.nav-right li a.active {
+  color: #1877f2;
+  position: relative;
+}
+
+/* Gạch chân xanh dương dưới link đang active */
+.nav-right li a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* cách dưới một chút */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1877f2;
+  border-radius: 2px;
+}
 
 /* Link Trang chủ nổi bật */
 .nav-right li a[href="index.html"] {

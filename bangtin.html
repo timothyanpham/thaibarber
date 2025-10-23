@@ -47,7 +47,9 @@
 
     <style>
       /* ===== CẤU TRÚC CHUNG ===== */
+
       .container {
+        display: block !important;
         max-width: 800px;
         margin: 0 auto;
         padding: 20px 15px 60px;
@@ -186,41 +188,40 @@
 
   <body>
     <!-- ===== NAVBAR ===== -->
-    <header>
-      <nav class="navbar">
-        <a href="index.html" class="nav-left">
-          <img src="img/logo.jpg" alt="Logo" class="nav-logo" />
-          <span class="brand">Thái Barber - 627 Giải Phóng</span>
-        </a>
-        <div class="hamburger" onclick="toggleMenu()">
-          <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-right" id="nav-menu">
-          <li><a href="index.html">Trang chủ</a></li>
-          <li><a href="bangtin.html" class="active">Bảng Tin</a></li>
-          <li><a href="tocdep.html">Tóc Đẹp</a></li>
-          <li class="lang-switch">
-            <a id="to-vi" class="active-lang" href="#">
-              <img
-                src="https://flagcdn.com/w20/vn.png"
-                alt="VN flag"
-                class="flag-icon"
-              />
-              VI
-            </a>
-            <span>|</span>
-            <a id="to-en" href="#">
-              <img
-                src="https://flagcdn.com/w20/us.png"
-                alt="US flag"
-                class="flag-icon"
-              />
-              EN
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+
+    <nav class="navbar">
+      <a href="index.html" class="nav-left">
+        <img src="img/logo.jpg" alt="Logo" class="nav-logo" />
+        <span class="brand">Thái Barber - 627 Giải Phóng</span>
+      </a>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-right" id="nav-menu">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="bangtin.html" class="active">Bảng Tin</a></li>
+        <li><a href="tocdep.html">Tóc Đẹp</a></li>
+        <li class="lang-switch">
+          <a id="to-vi" class="active-lang" href="#">
+            <img
+              src="https://flagcdn.com/w20/vn.png"
+              alt="VN flag"
+              class="flag-icon"
+            />
+            VI
+          </a>
+          <span>|</span>
+          <a id="to-en" href="#">
+            <img
+              src="https://flagcdn.com/w20/us.png"
+              alt="US flag"
+              class="flag-icon"
+            />
+            EN
+          </a>
+        </li>
+      </ul>
+    </nav>
 
     <!-- ===== NỘI DUNG ===== -->
     <main class="container">
@@ -252,7 +253,7 @@
             <li>Phù hợp: tóc dày vừa, sợi mềm đến trung bình.</li>
           </ul>
           <p>
-            👉 Xem video demo chi tiết bên dưới. Muốn thử ngay? Hãy tới ngay
+            👉 Muốn thử ngay? Hãy tới ngay
             <a href="https://maps.app.goo.gl/8g2Z5j3uH9QT96Zt6" target="_blank"
               >Thái Barber - 627 Giải Phóng, P. Trường Thi, Ninh Bình</a
             >
@@ -295,7 +296,7 @@
             <li>Phù hợp: tóc dày, sợi cứng, khuôn mặt to/tròn.</li>
           </ul>
           <p>
-            👉 Xem video demo chi tiết bên dưới. Muốn thử ngay? Hãy tới ngay
+            👉 Muốn thử ngay? Hãy tới ngay
             <a href="https://maps.app.goo.gl/8g2Z5j3uH9QT96Zt6" target="_blank"
               >Thái Barber - 627 Giải Phóng, P. Trường Thi, Ninh Bình</a
             >
@@ -304,6 +305,97 @@
           <a
             class="watch-on-yt"
             href="https://www.youtube.com/shorts/hEXC7rzTI0E"
+            target="_blank"
+            rel="noopener"
+            >Xem trên YouTube</a
+          >
+        </div>
+      </section>
+
+      <!-- BÀI 3 -->
+      <section class="news" id="ruffled">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/FemQFBwyHTI"
+            title="Uốn Ruffled dành cho tóc tơ mảnh - Thái Barber"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="news-text">
+          <h3>Uốn Ruffled dành cho tóc tơ mảnh 💈</h3>
+          <p class="news-meta">
+            Đăng: 2025-10-23 · Chuyên mục: Uốn tóc, Ruffled
+          </p>
+          <p>
+            Kiểu <strong>Ruffled</strong> được thiết kế đặc biệt cho tóc tơ mảnh
+            — giúp tóc trông dày hơn, có độ phồng tự nhiên mà không cần dùng quá
+            nhiều sáp. Phù hợp với anh em thích kiểu tóc mềm mại, tự nhiên nhưng
+            vẫn giữ nếp tốt.
+          </p>
+          <ul class="news-points">
+            <li>Độ uốn: nhẹ – tự nhiên, tạo volume ở phần đỉnh đầu.</li>
+            <li>
+              Styling: sấy ngược chiều tóc, kết hợp sáp khô hoặc pre-styling
+              spray.
+            </li>
+            <li>Phù hợp: tóc tơ, mảnh, dễ bết.</li>
+          </ul>
+          <p>
+            👉 Muốn thử ngay? Hãy tới ngay
+            <a href="https://maps.app.goo.gl/8g2Z5j3uH9QT96Zt6" target="_blank"
+              >Thái Barber - 627 Giải Phóng, P. Trường Thi, Ninh Bình</a
+            >
+            nhé!
+          </p>
+          <a
+            class="watch-on-yt"
+            href="https://www.youtube.com/shorts/FemQFBwyHTI"
+            target="_blank"
+            rel="noopener"
+            >Xem trên YouTube</a
+          >
+        </div>
+      </section>
+
+      <!-- BÀI 4 -->
+      <section class="news" id="ruffled-kids">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/h3q2cK858_I"
+            title="Mẫu Uốn Ruffled dành cho các bé - Thái Barber"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="news-text">
+          <h3>Mẫu Uốn Ruffled dành cho các bé 💈</h3>
+          <p class="news-meta">
+            Đăng: 2025-10-23 · Chuyên mục: Uốn tóc, Ruffled, Trẻ em
+          </p>
+          <p>
+            Kiểu <strong>Ruffled Kids</strong> là phiên bản được tùy chỉnh nhẹ
+            nhàng hơn của Ruffled thông thường, giúp tóc các bé giữ nếp tự nhiên
+            mà vẫn mềm mượt và dễ chải. Phù hợp với những bé có mái tóc mảnh,
+            khó tạo kiểu hoặc muốn đổi phong cách nhẹ nhàng.
+          </p>
+          <ul class="news-points">
+            <li>Độ uốn: nhẹ, giữ form mềm và tự nhiên.</li>
+            <li>Styling: chỉ cần sấy khô tự nhiên, không cần dùng sáp.</li>
+            <li>Phù hợp: trẻ em tóc tơ, mảnh, khó vào nếp.</li>
+          </ul>
+          <p>
+            👉 Xem video demo chi tiết bên dưới. Muốn cho bé thử ngay? Hãy ghé
+            <a href="https://maps.app.goo.gl/8g2Z5j3uH9QT96Zt6" target="_blank"
+              >Thái Barber - 627 Giải Phóng, P. Trường Thi, Ninh Bình</a
+            >
+            nhé!
+          </p>
+          <a
+            class="watch-on-yt"
+            href="https://www.youtube.com/shorts/h3q2cK858_I"
             target="_blank"
             rel="noopener"
             >Xem trên YouTube</a
@@ -326,7 +418,7 @@
           <p>Anh em nào muốn thử đổi gió thì qua tiệm test luôn nhé 💈.</p>
         </div>
         <p>
-          👉 Xem video demo chi tiết bên dưới. Muốn thử ngay? Hãy tới ngay
+          👉 Muốn thử ngay? Hãy tới ngay
           <a href="https://maps.app.goo.gl/8g2Z5j3uH9QT96Zt6" target="_blank"
             >Thái Barber - 627 Giải Phóng, P. Trường Thi, Ninh Bình</a
           >

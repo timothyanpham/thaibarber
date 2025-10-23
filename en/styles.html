@@ -359,6 +359,18 @@
           transform: none;
         }
       }
+      /* Link Trang chủ nổi bật */
+      .nav-right li a[href="./index.html"] {
+        background: #1877f2;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.1em;
+        text-transform: uppercase;
+      }
+      .nav-right li a[href="index.html"]:hover {
+        background: #145dbf;
+        color: #fff;
+      }
     </style>
   </head>
 
@@ -377,7 +389,9 @@
       <ul class="nav-right" id="nav-menu">
         <li><a href="./index.html">Home</a></li>
         <li><a href="./news.html">News</a></li>
-        <li><a href="./styles.html" aria-current="page">Styles</a></li>
+        <li>
+          <a href="./styles.html" aria-current="page" class="active">Styles</a>
+        </li>
         <li class="lang-switch">
           <a id="to-vi" href="#">
             <img
