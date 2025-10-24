@@ -30,13 +30,40 @@
     />
     <meta
       property="og:image"
-      content="https://www.thaibarber.net/img/banner.jpg"
+      content="https://www.thaibarber.net/img/bia.jpg"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://www.thaibarber.net/" />
     <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta name="theme-color" content="#1877f2" />
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Thái Barber - Tiệm Cắt Tóc Nam Nam Định"
+    />
+    <meta
+      name="twitter:description"
+      content="Phong cách hiện đại, giá hợp lý, thợ cắt chuyên nghiệp. Đặt lịch ngay tại Thái Barber!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.thaibarber.net/img/bia.jpg"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://www.thaibarber.net/"
+    />
+    <link rel="preload" as="image" href="img/bia.jpg" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://flagcdn.com" />
     <!-- Icon trên tab trình duyệt -->
-    <link rel="icon" href="logo.jpg" />
+    <link rel="icon" href="img/logo.jpg" />
 
     <!-- File CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -47,17 +74,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <!-- en -->
-    <link
-      rel="alternate"
-      hreflang="vi"
-      href="https://www.thaibarber.net/bangtin.html"
-    />
-    <link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.thaibarber.net/en/news.html"
-    />
-    <link rel="canonical" href="https://www.thaibarber.net/bangtin.html" />
+    <link rel="alternate" hreflang="vi" href="https://www.thaibarber.net/" />
+    <link rel="alternate" hreflang="en" href="https://www.thaibarber.net/en/" />
+    <link rel="canonical" href="https://www.thaibarber.net/" />
   </head>
 
   <body>
@@ -69,9 +88,16 @@
       </a>
 
       <!-- Nút hamburger cho mobile -->
-      <div class="hamburger" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </div>
+      <button
+        type="button"
+        class="hamburger"
+        aria-label="Mở menu"
+        aria-controls="nav-menu"
+        aria-expanded="false"
+        onclick="toggleMenu()"
+      >
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
 
       <ul class="nav-right" id="nav-menu">
         <li><a href="index.html" class="active">Trang chủ</a></li>
@@ -101,7 +127,13 @@
 
     <!-- ===== COVER ===== -->
     <div class="cover">
-      <img src="img/bia.jpg" alt="Ảnh bìa Thái Barber" class="cover-img" />
+      <img
+        src="img/bia.jpg"
+        alt="Ảnh bìa Thái Barber"
+        class="cover-img"
+        fetchpriority="high"
+        decoding="async"
+      />
       <!-- 
       <div class="cover-overlay">
         <h2>Thái Barber</h2>
@@ -181,6 +213,7 @@
 
       <!-- Main content -->
       <main class="content">
+        <h1 class="sr-only">Thái Barber – Tiệm cắt tóc nam đẹp tại Nam Định</h1>
         <!-- About -->
         <section id="about" class="card about">
           <h3>Giới thiệu cửa hàng</h3>
@@ -327,76 +360,130 @@
           <div class="more-content">
             <div class="gallery-grid">
               <div class="gallery-item">
-                <img src="img/album7.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album7.jpeg"
+                  alt="Không gian tiệm – quầy chờ Thái Barber"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album8.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album8.jpeg"
+                  alt="Dụng cụ barber khử khuẩn sạch sẽ"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album9.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album9.jpeg"
+                  alt="Gội đầu massage thư giãn tại tiệm"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album10.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album10.jpeg"
+                  alt="Cắt fade thấp (low fade) gọn gàng"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album11.jpeg" alt="Khách hàng hài lòng" />
+                <img src="img/album11.jpeg" alt="Kiểu tóc Undercut hiện đại" />
               </div>
               <div class="gallery-item">
-                <img src="img/album12.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album12.jpeg"
+                  alt="Side Part 7/3 lịch lãm cho công sở"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album13.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album13.jpeg"
+                  alt="Layer Hàn Quốc bồng bềnh tự nhiên"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album14.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album14.jpeg"
+                  alt="Mohican năng động – cạo gọn hai bên"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album15.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album15.jpeg"
+                  alt="Quiff tự nhiên – độ phồng vừa phải"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album16.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album16.jpeg"
+                  alt="Pompadour lịch lãm – vuốt ngược mái"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album17.jpeg" alt="Khách hàng hài lòng" />
+                <img src="img/album17.jpeg" alt="Uốn Ruffled cho tóc tơ mảnh" />
               </div>
               <div class="gallery-item">
-                <img src="img/album18.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album18.jpeg"
+                  alt="Uốn Premlock cho mặt tròn đầy đặn"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album19.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album19.jpeg"
+                  alt="Uốn phồng chân tóc tăng độ dày"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album20.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album20.jpeg"
+                  alt="Gẩy light tạo điểm nhấn mái tóc"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album21.jpeg" alt="Khách hàng hài lòng" />
+                <img src="img/album21.jpeg" alt="Nhuộm bạch kim nổi bật" />
               </div>
               <div class="gallery-item">
-                <img src="img/album22.jpeg" alt="Khách hàng hài lòng" />
+                <img src="img/album22.jpeg" alt="Tẩy tế bào chết da mặt nam" />
               </div>
               <div class="gallery-item">
-                <img src="img/album23.jpeg" alt="Khách hàng hài lòng" />
+                <img src="img/album23.jpeg" alt="Hút mụn cám vùng mũi" />
               </div>
               <div class="gallery-item">
-                <img src="img/album24.jpeg" alt="Khách hàng hài lòng" />
+                <img src="img/album24.jpeg" alt="Xông hơi mở lỗ chân lông" />
               </div>
               <div class="gallery-item">
-                <img src="img/album25.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album25.jpeg"
+                  alt="Sấy tạo phồng và định hình kiểu"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album26.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album26.jpeg"
+                  alt="Sản phẩm chăm sóc tóc tại tiệm"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album27.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album27.jpeg"
+                  alt="Góc decor trong tiệm Thái Barber"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album28.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album28.jpeg"
+                  alt="Khách hàng sau khi hoàn thiện kiểu tóc"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album29.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album29.jpeg"
+                  alt="Trước và sau khi uốn – so sánh"
+                />
               </div>
               <div class="gallery-item">
-                <img src="img/album30.jpeg" alt="Khách hàng hài lòng" />
+                <img
+                  src="img/album30.jpeg"
+                  alt="Barber đang cắt tỉa chi tiết"
+                />
               </div>
             </div>
           </div>
@@ -441,14 +528,20 @@
           <p>
             <i class="fab fa-facebook"></i>
             FB Cá nhân:
-            <a href="https://www.facebook.com/DanienThai" target="_blank"
+            <a
+              href="https://www.facebook.com/DanienThai"
+              target="_blank"
+              rel="noopener"
               >Thái Barber</a
             >
           </p>
           <p>
             <i class="fab fa-facebook"></i>
             FB Fanpage:
-            <a href="https://www.facebook.com/thaibarber627/" target="_blank"
+            <a
+              href="https://www.facebook.com/thaibarber627/"
+              target="_blank"
+              rel="noopener"
               >Tiệm Tóc Nam - Thái Barber</a
             >
           </p>
@@ -469,12 +562,12 @@
           <h2>📰 Bảng Tin Mới Nhất</h2>
           <ul class="news-list">
             <li>
-              <a href="bangtin.html#premlock" target="_blank"
+              <a href="bangtin.html#premlock"
                 >Uốn Premlock dành cho anh em mặt to 💈</a
               >
             </li>
             <li>
-              <a href="bangtin.html#messy-fringe-curly" target="_blank"
+              <a href="bangtin.html#messy-fringe-curly"
                 >Uốn messy fringe curly cho zai đẹp 💈</a
               >
             </li>
@@ -486,6 +579,12 @@
             <li>
               <a href="bangtin.html#ruffled-kids"
                 >Mẫu Uốn Ruffled dành cho các bé 💈</a
+              >
+            </li>
+
+            <li>
+              <a href="bangtin.html#volumizing-perm-hairline"
+                >Uốn tăng độ dày cho tóc thưa mỏng, che hói trán 💈</a
               >
             </li>
             <li>
@@ -534,7 +633,10 @@
     </script>
     <script>
       function toggleMenu() {
-        document.getElementById("nav-menu").classList.toggle("show");
+        const menu = document.getElementById("nav-menu");
+        const btn = document.querySelector(".hamburger");
+        menu.classList.toggle("show");
+        btn.setAttribute("aria-expanded", menu.classList.contains("show"));
       }
     </script>
     <script>
@@ -672,6 +774,20 @@
         } else {
           window.location.href = "index.html";
         }
+      });
+    </script>
+    <script>
+      // Lazy toàn bộ ảnh trong gallery
+      document.querySelectorAll("#gallery .gallery-item img").forEach((img) => {
+        img.loading = "lazy";
+        img.decoding = "async";
+        // Nếu muốn ngăn ảnh ưu tiên mạng: img.fetchPriority = 'low';
+      });
+    </script>
+    <!-- hamberger -->
+    <script>
+      document.querySelector(".hamburger").addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") toggleMenu();
       });
     </script>
   </body>

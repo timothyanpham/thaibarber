@@ -26,7 +26,19 @@
     />
     <meta property="og:url" content="https://www.thaibarber.net/bangtin.html" />
     <meta property="og:type" content="article" />
-
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bảng Tin - Thái Barber Nam Định" />
+    <meta
+      name="twitter:description"
+      content="Xem ngay tin tức và khuyến mãi mới nhất tại Thái Barber."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.thaibarber.net/img/bangtin.jpg"
+    />
+    <link rel="preconnect" href="https://www.youtube.com" />
+    <link rel="preconnect" href="https://i.ytimg.com" />
+    <link rel="preconnect" href="https://img.youtube.com" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -93,39 +105,46 @@
       }
 
       /* ===== VIDEO ===== */
+      /* Khung video mặc định: 16:9 (ngang) */
       .video-container {
         position: relative;
         width: 100%;
-        padding-bottom: 56.25%; /* 16:9 mặc định trên PC */
-        height: 0;
+        aspect-ratio: 16 / 9;
         overflow: hidden;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         margin: 0 auto 15px;
       }
-      .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-        border-radius: 10px;
-        object-fit: cover;
-      }
 
-      /* Khi xem trên điện thoại (9:16) */
-      @media (max-width: 768px) {
+      /* Dọc điện thoại: 9:16 */
+      @media (orientation: portrait) {
         .video-container {
-          padding-bottom: 177%;
+          aspect-ratio: 9 / 16;
         }
       }
 
-      .video-caption {
-        text-align: center;
-        font-size: 0.95rem;
-        color: #555;
-        margin: 5px 0 10px;
+      /* Iframe phủ kín khung, giữ nguyên bo góc */
+      .video-container iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        border-radius: inherit;
+        object-fit: contain; /* không cắt nội dung; muốn fill khung thì dùng 'cover' */
+      }
+
+      /* Fallback cho trình duyệt chưa hỗ trợ aspect-ratio */
+      @supports not (aspect-ratio: 16 / 9) {
+        .video-container {
+          height: 0;
+          padding-bottom: 56.25%; /* 16:9 */
+        }
+        @media (orientation: portrait) {
+          .video-container {
+            padding-bottom: 177%;
+          } /* 9:16 */
+        }
       }
 
       /* ===== NỘI DUNG BÀI VIẾT ===== */
@@ -189,7 +208,7 @@
   <body>
     <!-- ===== NAVBAR ===== -->
 
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Thanh điều hướng chính">
       <a href="index.html" class="nav-left">
         <img src="img/logo.jpg" alt="Logo" class="nav-logo" />
         <span class="brand">Thái Barber - 627 Giải Phóng</span>
@@ -197,7 +216,13 @@
       <div class="hamburger" onclick="toggleMenu()">
         <i class="fas fa-bars"></i>
       </div>
-      <ul class="nav-right" id="nav-menu">
+      <ul
+        class="nav-right"
+        id="nav-menu"
+        ole="button"
+        tabindex="0"
+        aria-label="Mở menu"
+      >
         <li><a href="index.html">Trang chủ</a></li>
         <li><a href="bangtin.html" class="active">Bảng Tin</a></li>
         <li><a href="tocdep.html">Tóc Đẹp</a></li>
@@ -225,11 +250,15 @@
 
     <!-- ===== NỘI DUNG ===== -->
     <main class="container">
+      <h1 class="sr-only">
+        Bảng Tin Thái Barber – Cập nhật khuyến mãi & hoạt động
+      </h1>
       <h2>📢 Bảng Tin Thái Barber</h2>
       <!-- BÀI 1 -->
       <section class="news" id="messy-fringe-curly">
         <div class="video-container">
           <iframe
+            loading="lazy"
             src="https://www.youtube.com/embed/Gd0frezhDb0"
             title="Uốn messy fringe curly cho zai đẹp - Thái Barber"
             frameborder="0"
@@ -272,6 +301,7 @@
       <section class="news" id="premlock">
         <div class="video-container">
           <iframe
+            loading="lazy"
             src="https://www.youtube.com/embed/hEXC7rzTI0E"
             title="Uốn Premlock dành cho anh em mặt to - Thái Barber"
             frameborder="0"
@@ -316,6 +346,7 @@
       <section class="news" id="ruffled">
         <div class="video-container">
           <iframe
+            loading="lazy"
             src="https://www.youtube.com/embed/FemQFBwyHTI"
             title="Uốn Ruffled dành cho tóc tơ mảnh - Thái Barber"
             frameborder="0"
@@ -363,6 +394,7 @@
       <section class="news" id="ruffled-kids">
         <div class="video-container">
           <iframe
+            loading="lazy"
             src="https://www.youtube.com/embed/h3q2cK858_I"
             title="Mẫu Uốn Ruffled dành cho các bé - Thái Barber"
             frameborder="0"
@@ -402,54 +434,74 @@
           >
         </div>
       </section>
-
       <!-- BÀI 5 -->
-<section class="news" id="volumizing-perm-hairline">
-  <div class="video-container">
-    <iframe
-      src="https://www.youtube.com/embed/IFjTadCs2d4"
-      title="Uốn tăng độ dày cho tóc thưa mỏng, che hói trán - Thái Barber"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-  </div>
+      <section class="news" id="volumizing-perm-hairline">
+        <div class="video-container">
+          <iframe
+            loading="lazy"
+            src="https://www.youtube.com/embed/IFjTadCs2d4"
+            title="Uốn tăng độ dày cho tóc thưa mỏng, che hói trán - Thái Barber"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
 
-  <div class="news-text">
-    <h3>Uốn tăng độ dày cho tóc thưa mỏng, che hói trán 💈</h3>
-    <p class="news-meta">Đăng: 2025-10-24 · Chuyên mục: Uốn tóc, Volumizing, Che hói trán</p>
+        <div class="news-text">
+          <h3>Uốn tăng độ dày cho tóc thưa mỏng, che hói trán 💈</h3>
+          <p class="news-meta">
+            Đăng: 2025-10-24 · Chuyên mục: Uốn tóc, Volumizing, Che hói trán
+          </p>
 
-    <p>
-      Kiểu <strong>Volumizing Perm</strong> tập trung nâng chân tóc và tạo độ phồng ở
-      vùng trán–đỉnh, giúp mái tóc mỏng trông dày hơn, giảm cảm giác thưa/hói phần chân tóc
-      trước trán mà vẫn tự nhiên, dễ chăm.
-    </p>
+          <p>
+            Kiểu <strong>Volumizing Perm</strong> tập trung nâng chân tóc và tạo
+            độ phồng ở vùng trán–đỉnh, giúp mái tóc mỏng trông dày hơn, giảm cảm
+            giác thưa/hói phần chân tóc trước trán mà vẫn tự nhiên, dễ chăm.
+          </p>
 
-    <ul class="news-points">
-      <li><strong>Độ uốn:</strong> nhẹ–vừa, ưu tiên nâng chân tóc &amp; độ phồng ở mái/trán.</li>
-      <li><strong>Kỹ thuật:</strong> chia block hairline, rod nhỏ–vừa, đặt hướng che đường tóc.</li>
-      <li><strong>Styling:</strong> sấy ngược hướng mọc tóc 3–5 phút; có thể dùng pre-styler nhẹ hoặc không cần sáp.</li>
-      <li><strong>Phù hợp:</strong> tóc tơ, mảnh, mật độ thấp; đường tóc lộ/hói chữ M nhẹ.</li>
-      <li><strong>Giữ nếp:</strong> ~6–8 tuần (tùy chất tóc &amp; chăm sóc).</li>
-    </ul>
+          <ul class="news-points">
+            <li>
+              <strong>Độ uốn:</strong> nhẹ–vừa, ưu tiên nâng chân tóc &amp; độ
+              phồng ở mái/trán.
+            </li>
+            <li>
+              <strong>Kỹ thuật:</strong> chia block hairline, rod nhỏ–vừa, đặt
+              hướng che đường tóc.
+            </li>
+            <li>
+              <strong>Styling:</strong> sấy ngược hướng mọc tóc 3–5 phút; có thể
+              dùng pre-styler nhẹ hoặc không cần sáp.
+            </li>
+            <li>
+              <strong>Phù hợp:</strong> tóc tơ, mảnh, mật độ thấp; đường tóc
+              lộ/hói chữ M nhẹ.
+            </li>
+            <li>
+              <strong>Giữ nếp:</strong> ~6–8 tuần (tùy chất tóc &amp; chăm sóc).
+            </li>
+          </ul>
 
-    <p>
-      👉 Xem video demo chi tiết bên dưới. Muốn thử ngay? Ghé
-      <a href="https://maps.app.goo.gl/8g2Z5j3uH9QT96Zt6" target="_blank" rel="noopener">
-        Thái Barber - 627 Giải Phóng, P. Trường Thi
-      </a>
-      để được tư vấn kiểu phù hợp nhé!
-    </p>
+          <p>
+            👉 Muốn thử ngay? Ghé
+            <a
+              href="https://maps.app.goo.gl/8g2Z5j3uH9QT96Zt6"
+              target="_blank"
+              rel="noopener"
+            >
+              Thái Barber - 627 Giải Phóng, P. Trường Thi
+            </a>
+            để được tư vấn kiểu phù hợp nhé!
+          </p>
 
-    <a
-      class="watch-on-yt"
-      href="https://www.youtube.com/shorts/IFjTadCs2d4"
-      target="_blank"
-      rel="noopener"
-    >Xem trên YouTube</a>
-  </div>
-</section>
-
+          <a
+            class="watch-on-yt"
+            href="https://www.youtube.com/shorts/IFjTadCs2d4"
+            target="_blank"
+            rel="noopener"
+            >Xem trên YouTube</a
+          >
+        </div>
+      </section>
 
       <!-- BÀICUối-->
       <section class="news" id="uon-toc">
