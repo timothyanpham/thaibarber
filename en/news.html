@@ -425,9 +425,16 @@
         <img src="../img/logo.jpg" alt="Logo" class="nav-logo" />
         <span class="brand">Thai Barber - 627 Giai Phong</span>
       </a>
-      <div class="hamburger" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </div>
+      <button
+        type="button"
+        class="hamburger"
+        aria-label="Mở menu"
+        aria-controls="nav-menu"
+        aria-expanded="false"
+        onclick="toggleMenu()"
+      >
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
       <ul class="nav-right" id="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="news.html" class="active">News</a></li>

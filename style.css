@@ -1,3 +1,4 @@
+*, *::before, *::after { box-sizing: border-box; }
 html {
   scroll-behavior: smooth;
 }
@@ -731,14 +732,31 @@ footer {
   .gallery-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
+  .navbar {
+  display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5vw;              /* KHỚP .container (90% ⇒ 5% mỗi bên) */
+    padding-right: 5vw;
+    gap: 12px;
+  }
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
   .nav-right {
     display: none;
   }
-  .hamburger {
-    display: block;
-    padding: 8px;              /* tăng vùng chạm */
-  line-height: 1;
-  -webkit-tap-highlight-color: transparent;
+   .hamburger {
+      display: block;
+    margin-left: auto;              /* đẩy sang phải */
+    margin-right: 0;                /* đã có padding-right:5vw */
+    padding: 8px;
+    line-height: 1;
+    font-size: 1.8em;
+    color: #1877f2;
+    -webkit-tap-highlight-color: transparent;
   }
   .container {
     flex-direction: column;
@@ -759,8 +777,10 @@ footer {
     font-size: 1.5em;
   }
   .brand {
-    font-size: 1.1em;
-    white-space: nowrap;
+     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60vw;     
   }
   .about-wrapper,
   .about {
@@ -768,6 +788,12 @@ footer {
   }
   .about-img img {
     max-width: 100%;
+  }
+  .nav-right.show {
+    position: absolute;
+    top: 56px;
+    right: 5vw;                     /* khớp gutter của navbar */
+    width: 200px;
   }
 }
 /* ===== LIGHTBOX HIỂN THỊ ẢNH ===== */
